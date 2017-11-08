@@ -1,0 +1,91 @@
+{
+	"New Vuex Store": {
+		"prefix": "newVuexStore",
+		"body": [
+				"const ${1:store} = new Vuex.Store({",
+				"\t${2:// ...}",
+				"})"
+		],
+		"description": "const store = new Vuex.Store({ })"
+	},
+	"Vuex Store": {
+		"prefix": "vstore",
+		"body": [
+			"import Vue from 'vue';",
+			"import Vuex from 'vuex';",
+			"",
+			"Vue.use(Vuex);",
+			"",
+			"export const store = new Vuex.Store({",
+			"\tstate: {",
+			"\t\t${1:key}: ${2:value}",
+			"\t}",
+			"});"
+		],
+		"description": "Base for Vuex store"
+  },
+	"Vuex Getters": {
+		"prefix": "vgetter",
+		"body": [
+			"getters: {",
+			"\tvalue: ${1:value} => {",
+			"\t\treturn state.${1:value};",
+			"\t}",
+			"}"
+		],
+		"description": "vuex getter"
+	},
+	"Vuex Mutation": {
+		"prefix": "vmutation",
+		"body": [
+			"mutations: {",
+			"\t${1:updateValue}(state, ${3:payload}) {",
+			"\t\tstate.${2:value} = ${3:payload};",
+			"\t}",
+			"}"
+		],
+		"description": "vuex mutation"
+	},
+	"Vuex Action": {
+		"prefix": "vaction",
+		"body": [
+			"actions: {",
+			"\t${1:updateValue}({commit}, ${2:payload}) {",
+			"\t\tcommit(${1:updateValue}, ${2:payload});",
+			"\t}",
+			"}"
+		],
+		"description": "vuex action"
+  },
+	"Vue Import Vuex Store": {
+		"prefix": "vstore-import",
+		"body": [
+			"import { store } from './store/store';"
+		],
+		"description": "import vuex store into main.js"
+	},
+	"Vue Commit Vuex Store in Methods": {
+    "prefix": "vcommit",
+    "body": [
+      "${1:mutationName}() {",
+      "\tthis.\\$store.commit('${1:mutationName}', ${2:payload})",
+      "}"
+    ],
+    "description": "commit to vuex store in methods for mutation"
+  },
+  "Vue Dispatch Vuex Store in Methods": {
+    "prefix": "vdispatch",
+    "body": [
+      "${1:actionName}() {",
+      "\tthis.\\tore.dispatch('${1:actionName}', ${2:payload})",
+      "}"
+    ],
+    "description": "dispatch to vuex store in methods for action"
+	},
+	"Vue Import GSAP": {
+    "prefix": "vimport-gsap",
+    "body": ["import { TimelineMax, ${1:Ease} } from 'gsap'"],
+    "description":
+      "component methods options that dispatch an action from vuex store."
+  }
+}

@@ -1,0 +1,70 @@
+{
+	"name": "vue-ls-snippets",
+	"displayName": "Vue Snippets(vue-ls)",
+	"author": "vaniship",
+	"publisher": "vaniship",
+	"icon": "asset/vue.png",
+	"description": "A Vue Snippets Extension",
+	"license": "MIT",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"keywords": [
+		"javascript",
+		"snippet",
+		"vue",
+		"vue 2"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/u10/vscode-vue-ls-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/u10/vscode-vue-ls-snippets/issues",
+		"email": "vaniship@gmail.com"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script-vuex.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script-word.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue-script.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue-script-vuex.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue-script-word.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/vue-template.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/vue-template-pug.json"
+			}
+		]
+	}
+}

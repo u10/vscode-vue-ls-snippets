@@ -1,0 +1,313 @@
+{
+  "Vue Data": {
+    "prefix": "vdata",
+    "body": ["data() {", "\treturn {", "\t\t${1:key}: ${2:value}", "\t}", "},"],
+    "description": "Vue Component Data"
+  },
+  "Vue Methods": {
+    "prefix": "vmethod",
+    "body": ["methods: {", "\t${1:name}() {", "\t\t${0}", "\t}", "},"],
+    "description": "vue method"
+  },
+  "Vue Computed": {
+    "prefix": "vcomputed",
+    "body": [
+      "computed: {",
+      "\t${1:name}() {",
+      "\t\treturn this.${2:data} ${0}",
+      "\t}",
+      "},"
+    ],
+    "description": "computed value"
+  },
+  "Vue Watchers": {
+    "prefix": "vwatcher",
+    "body": [
+      "watch: {",
+      "\t${1:data}(${2:newValue}, ${3:oldValue}) {",
+      "\t\t${0}",
+      "\t}",
+      "},"
+    ],
+    "description": "vue watcher"
+  },
+  "Vue Props with Default": {
+    "prefix": "vprops",
+    "body": [
+      "props: {",
+      "\t${1:propName}: {",
+      "\t\ttype: ${2:number},",
+      "\t\tdefault: ${0}",
+      "\t},",
+      "},"
+    ],
+    "description": "Vue Props with Default"
+  },
+  "Vue Import File": {
+    "prefix": "vimport",
+    "body": ["import ${1:New} from './components/${1:New}.vue';"],
+    "description": "Import one component into another"
+  },
+  "Vue Import into the Component": {
+    "prefix": "vimport-c",
+    "body": ["components: {", "\t${1:New},", "}"],
+    "description": "Import one component into another, within export statement"
+  },
+  "Vue Import Export": {
+    "prefix": "vimport-export",
+    "body": [
+      "import ${1:Name} from '~components/${1:Name}.vue'",
+      "",
+      "export default {",
+      "\tcomponents: {",
+      "\t\t${1:Name}",
+      "\t},",
+      "}"
+    ],
+    "description": "import a component and include it in export default"
+  },
+  "Vue Filter": {
+    "prefix": "vfilter",
+    "body": [
+      "filters: {",
+      "\t${1:fnName}: function(${2:value}) {",
+      "\t\treturn ${2:value}${0};",
+      "\t}",
+      "}"
+    ],
+    "description": "vue filter"
+  },
+  "Vue Mixin": {
+    "prefix": "vmixin",
+    "body": [
+      "const ${1:mixinName} = {",
+      "\tmounted() {",
+      "\t\tconsole.log('hello from mixin!')",
+      "\t},",
+      "}"
+    ],
+    "description": "vue mixin"
+  },
+  "Vue Use Mixin": {
+    "prefix": "vmixin-use",
+    "body": ["mixins: [${1:mixinName}]"],
+    "description": "vue use mixin"
+  },
+  "Vue Custom Directive": {
+    "prefix": "vc-direct",
+    "body": [
+      "Vue.directive('${1:directiveName}', {",
+      "\tbind(el, binding, vnode) {",
+      "\t\tel.style.${2:arg} = binding.value.${2:arg};",
+      "\t}",
+      "});"
+    ],
+    "description": "vue custom directive"
+  },
+  "Vue Import Library": {
+    "prefix": "vimport-lib",
+    "body": ["import { ${1:libName} } from '${1:libName}'"],
+    "description": "import a library"
+  },
+  "Vue Transition Methods with JavaScript Hooks": {
+    "prefix": "vanimhook-js",
+    "body": [
+      "beforeEnter(el) {",
+      "\tconsole.log('beforeEnter');",
+      "},",
+      "enter(el, done) {",
+      "\tconsole.log('enter');",
+      "\tdone();",
+      "},",
+      "beforeLeave(el) {",
+      "\tconsole.log('beforeLeave');",
+      "},",
+      "leave(el, done) {",
+      "\tconsole.log('leave');",
+      "\tdone();",
+      "},"
+    ],
+    "description": "transition component js hooks"
+  },
+  "Incrementer": {
+    "prefix": "vinc",
+    "body": ["return ${1:this.num} += ${2:1}"],
+    "description": "increment"
+  },
+  "Decrementer": {
+    "prefix": "vdec",
+    "body": ["return ${1:this.num} -= ${2:1}"],
+    "description": "decrement"
+  },
+  "vm.$data": {
+    "prefix": "vmData",
+    "body": [
+        "${1:vm}.\\$data$2"
+    ],
+    "description": "Type: Object"
+  },
+  "vm.$props": {
+      "prefix": "vmProps",
+      "body": [
+          "${1:vm}.\\$props$2"
+      ],
+      "description": "Type: Object"
+  },
+  "vm.$el": {
+      "prefix": "vmEl",
+      "body": [
+          "${1:vm}.\\$el$2"
+      ],
+      "description": "Type: HTMLElement"
+  },
+  "vm.$options": {
+      "prefix": "vmOptions",
+      "body": [
+          "${1:vm}.\\$options$2"
+      ],
+      "description": "Type: Object"
+  },
+  "vm.$parent": {
+      "prefix": "vmParent",
+      "body": [
+          "${1:vm}.\\$parent$2"
+      ],
+      "description": "Type: Vue instance"
+  },
+  "vm.$root": {
+      "prefix": "vmRoot",
+      "body": [
+          "${1:vm}.\\$root$2"
+      ],
+      "description": "Type: Vue instance"
+  },
+  "vm.$children": {
+      "prefix": "vmChildren",
+      "body": [
+          "${1:vm}.\\$children$2"
+      ],
+      "description": "Type: Array<Vue instance>"
+  },
+  "vm.$slots": {
+      "prefix": "vmSlots",
+      "body": [
+          "${1:vm}.\\$slots$2"
+      ],
+      "description": "Type: Object"
+  },
+  "vm.$scopedSlots": {
+      "prefix": "vmScopedSlots",
+      "body": [
+          "\\$this.\\$scopedSlots.default({",
+          "\t",
+          "})"
+      ],
+      "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
+  },
+  "vm.$refs": {
+      "prefix": "vmRefs",
+      "body": [
+          "${1:vm}.\\$refs$2"
+      ],
+      "description": "Type: Object"
+  },
+  "vm.$isServer": {
+      "prefix": "vmIsServer",
+      "body": [
+          "${1:vm}.\\$isServer$2"
+      ],
+      "description": "Type: boolean"
+  },
+  "vm.$attrs": {
+      "prefix": "vmAttrs",
+      "body": [
+          "${1:vm}.\\$attrs$2"
+      ],
+      "description": "Type: { [key: string]: string }"
+  },
+  "vm.$listeners": {
+      "prefix": "vmListeners",
+      "body": [
+          "${1:vm}.\\$listeners$2"
+      ],
+      "description": "Type: { [key: string]: Function | Array<Function> }"
+  },
+  "vm.$watch": {
+      "prefix": "vmWatch",
+      "body": [
+          "${1:vm}.\\$watch(${2:expOrFn}, ${3:callback})"
+      ],
+      "description": "vm.$watch( expOrFn, callback, [options] )"
+  },
+  "vm.$set": {
+      "prefix": "vmSet",
+      "body": [
+          "${1:vm}.\\$set(${2:object}, ${3:key}, ${4:value})"
+      ],
+      "description": "vm.$set( object, key, value )"
+  },
+  "vm.$delete": {
+      "prefix": "vmDelete",
+      "body": [
+          "${1:vm}.\\$delete(${2:object}, ${3:key})"
+      ],
+      "description": "vm.$delete( object, key )"
+  },
+
+  "vm.$on": {
+      "prefix": "vmOn",
+      "body": [
+          "${1:vm}.\\$on('${2:event}', ${3:callback})$4"
+      ],
+      "description": "vm.$on( event, callback )"
+  },
+  "vm.$once": {
+      "prefix": "vmOnce",
+      "body": [
+          "${1:vm}.\\$once('${2:event}', ${3:callback})$4"
+      ],
+      "description": "vm.$once( event, callback )"
+  },
+  "vm.$off": {
+      "prefix": "vmOff",
+      "body": [
+          "${1:vm}.\\$off('${2:event}', ${3:callback})$4"
+      ],
+      "description": "vm.$off( [event, callback] )"
+  },
+  "vm.$emit": {
+      "prefix": "vmEmit",
+      "body": [
+          "${1:vm}.\\$emit('${2:event}'${3:, […args]})$4"
+      ],
+      "description": "vm.$emit( event, […args] )"
+  },
+  "vm.$mount": {
+      "prefix": "vmMount",
+      "body": [
+          "${1:vm}.\\$mount('$2')"
+      ],
+      "description": "vm.$mount( [elementOrSelector] )"
+  },
+  "vm.$forceUpdate": {
+      "prefix": "vmForceUpdate",
+      "body": [
+          "${1:vm}.\\$forceUpdate()"
+      ],
+      "description": "vm.$forceUpdate()"
+  },
+  "vm.$nextTick": {
+      "prefix": "vmNextTick",
+      "body": [
+          "${1:vm}.\\$nextTick(${2:callback})"
+      ],
+      "description": "vm.$nextTick( callback )"
+  },
+  "vm.$destroy": {
+      "prefix": "vmDestroy",
+      "body": [
+          "${1:vm}.\\$destroy()$2"
+      ],
+      "description": "vm.$destroy()"
+  }
+}

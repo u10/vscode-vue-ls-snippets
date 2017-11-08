@@ -1,0 +1,205 @@
+{
+    "import": {
+        "prefix": "import",
+        "body": [
+            "import $1 from '$2'"
+        ],
+        "description": "import ... from ..."
+    },
+    "vue": {
+        "prefix": "newVue",
+        "body": [
+            "new Vue({",
+            "\t$1",
+            "})"
+        ],
+        "description": "new Vue()"
+    },
+    "silent": {
+        "prefix": "VueConfigSilent",
+        "body": [
+            "Vue.config.silent = ${1:true}"
+        ],
+        "description": "Vue.config.silent"
+    },
+    "optionMergeStrategies": {
+        "prefix": "VueConfigOptionMergeStrategies",
+        "body": [
+            "Vue.config.optionMergeStrategies$1"
+        ],
+        "description": "Vue.config.optionMergeStrategies"
+    },
+    "devtools": {
+        "prefix": "VueConfigDevtools",
+        "body": [
+            "Vue.config.devtools = ${1:true}"
+        ],
+        "description": "Vue.config.devtools"
+    },
+    "errorHandler": {
+        "prefix": "VueConfigErrorHandler",
+        "body": [
+            "Vue.config.errorHandler = function (err, vm, info) {",
+            "\t${1:// handle error}",
+            "}"
+        ],
+        "description": "Vue.config.errorHandler"
+    },
+    "warnHandler": {
+        "prefix": "VueConfigWarnHandler",
+        "body": [
+            "Vue.config.warnHandler = function (msg, vm, trace) {",
+            "\t${1:// handle error}",
+            "}"
+        ],
+        "description": "Vue.config.warnHandler"
+    },
+    "ignoredElements": {
+        "prefix": "VueConfigIgnoredElements",
+        "body": [
+            "Vue.config.ignoredElements = [",
+            "\t'${1}'",
+            "]$0"
+        ],
+        "description": "Vue.config.ignoredElements"
+    },
+    "keyCodes": {
+        "prefix": "VueConfigKeyCodes",
+        "body": [
+            "Vue.config.keyCodes = {",
+            "\t${1:// camelCase won`t work}",
+            "}"
+        ],
+        "description": "Vue.config.keyCodes"
+    },
+    "performance": {
+        "prefix": "VueConfigPerformance",
+        "body": [
+            "Vue.config.performance = ${1:true}"
+        ],
+        "description": "Vue.config.performance"
+    },
+    "productionTip": {
+        "prefix": "VueConfigProductionTip",
+        "body": [
+            "Vue.config.productionTip = ${1:false}"
+        ],
+        "description": "Vue.config.productionTip"
+    },
+
+    "extend": {
+        "prefix": "vueExtend",
+        "body": [
+            "Vue.extend({",
+            "\ttemplate:${1:template}",
+            "})"
+        ],
+        "description": "Vue.extend( options )"
+    },
+    "nextTick": {
+        "prefix": "VueNextTick",
+        "body": [
+            "Vue.nextTick({",
+            "\t$1",
+            "})"
+        ],
+        "description": "Vue.nextTick( callback, [context] )"
+    },
+    "set": {
+        "prefix": "VueSet",
+        "body": [
+            "Vue.set(${1:target}, ${2:key}, ${3:value})"
+        ],
+        "description": "Vue.set( target, key, value )"
+    },
+    "delete": {
+        "prefix": "VueDelete",
+        "body": [
+            "Vue.delete(${1:target}, ${2:key})"
+        ],
+        "description": "Vue.delete( target, key )"
+    },
+    "directive": {
+        "prefix": "VueDirective",
+        "body": [
+            "Vue.directive(${1:id}${2:, [definition]})"
+        ],
+        "description": "Vue.directive( id, [definition] )"
+    },
+    "filter": {
+        "prefix": "VueFilter",
+        "body": [
+            "Vue.filter(${1:id}${2:, [definition]})"
+        ],
+        "description": "Vue.filter( id, [definition] )"
+    },
+    "component": {
+        "prefix": "VueComponent",
+        "body": [
+            "Vue.component(${1:id}${2:, [definition]})$0"
+        ],
+        "description": "Vue.component( id, [definition] )"
+    },
+    "use": {
+        "prefix": "VueUse",
+        "body": [
+            "Vue.use(${1:plugin})$0"
+        ],
+        "description": "Vue.use( plugin )"
+    },
+    "mixin": {
+        "prefix": "VueMixin",
+        "body": [
+            "Vue.mixin(${1:mixin})"
+        ],
+        "description": "Vue.mixin( mixin )"
+    },
+    "compile": {
+        "prefix": "VueCompile",
+        "body": [
+            "Vue.compile(${1:template})"
+        ],
+        "description": "Vue.compile( template )"
+    },
+    "version": {
+        "prefix": "VueVersion",
+        "body": [
+            "Vue.version.split('.')[$1]$0"
+        ],
+        "description": "Vue.version.split('.')[]"
+    },
+
+
+    "renderer": {
+        "prefix": "renderer",
+        "body": [
+            "const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
+        ],
+        "description": "require('vue-server-renderer').createRenderer()"
+    },
+    "createRenderer": {
+        "prefix": "createRenderer",
+        "body": [
+            "createRenderer({",
+            "\t$1",
+            "})"
+        ],
+        "description": "createRenderer({ })"
+    },
+    "preventDefault":{
+        "prefix":"preventDefault",
+        "body":[
+            "preventDefault();",
+            "$1"
+        ],
+        "description":"preventDefault()"
+    },
+    "stopPropagation": {
+        "prefix": "stopPropagation",
+        "body": [
+            "stopPropagation();",
+            "$1"
+        ],
+        "description":"stopPropagation()"
+    }
+}

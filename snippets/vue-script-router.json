@@ -1,0 +1,84 @@
+{
+    "newVueRouter": {
+        "prefix": "newVueRouter",
+        "body": [
+            "const ${1:router} = new VueRouter({",
+            "\t$2",
+            "})$0"
+        ],
+        "description": "const router = newVueRouter({ })"
+    },
+    "routerBeforeEach": {
+        "prefix": "routerBeforeEach",
+        "body": [
+            "${1:router}.beforeEach((to, from, next) => {",
+            "\t${2:// to and from are both route objects}",
+            "})$0"
+        ],
+        "description": "router.beforeEach"
+    },
+    "routerReplace": {
+        "prefix": "routerReplace",
+        "body": [
+            "${1:router}.replace($2)$0"
+        ],
+        "description": "router.replace()"
+    },
+    "routerGo": {
+        "prefix": "routerGo",
+        "body": [
+            "${1:router}.go($2)$0"
+        ],
+        "description": "router.go()"
+    },
+    "routerPush": {
+        "prefix": "routerPush",
+        "body": [
+            "${1:router}.push($2)$0"
+        ],
+        "description": "router.push()"
+    },
+    "routes": {
+        "prefix": "routes",
+        "body": [
+            "routes: [$1]$0"
+        ],
+        "description": "routes: []"
+    },
+    "beforeEnter": {
+        "prefix": "beforeEnter",
+        "body": [
+            "beforeEnter: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeEnter: (to, from, next) => { }"
+    },
+    "beforeRouteEnter": {
+        "prefix": "beforeRouteEnter",
+        "body": [
+            "beforeRouteEnter: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeRouteEnter: (to, from, next) => { }"
+    },
+    "beforeRouteLeave": {
+        "prefix": "beforeRouteLeave",
+        "body": [
+            "beforeRouteLeave: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeRouteLeave: (to, from, next) => { }"
+    },
+    "scrollBehavior": {
+        "prefix": "scrollBehavior",
+        "body": [
+            "scrollBehavior (to, from, savedPosition) {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "scrollBehavior (to, from, savedPosition) { }"
+    }
+}
