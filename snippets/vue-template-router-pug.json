@@ -1,0 +1,23 @@
+{
+  "RouterView": {
+    "prefix": "RouterView",
+    "body": [
+      "router-view $0"
+    ],
+    "description": "router-view element"
+  },
+  "RouterLink": {
+    "prefix": "RouterLink",
+    "body": [
+      "router-link $0"
+    ],
+    "description": "router-link element"
+  },
+  "RouterLinkTo": {
+    "prefix": "RouterLinkTo",
+    "body": [
+      "router-link (to=\"$1\") $0"
+    ],
+    "description": "router-link (to='') . router-link element"
+  }
+}

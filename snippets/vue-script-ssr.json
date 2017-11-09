@@ -1,0 +1,53 @@
+{
+  "vSsrRenderer": {
+    "prefix": "vSsrRenderer",
+    "body": [
+        "const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
+    ],
+    "description": "require('vue-server-renderer').createRenderer()"
+  },
+  "vSsrCreateRenderer": {
+      "prefix": "vSsrCreateRenderer",
+      "body": [
+          "createRenderer({",
+          "\t$1",
+          "})"
+      ],
+      "description": "createRenderer({ })"
+  },
+  "renderToString": {
+    "prefix": "renderToString",
+    "body": [
+      "renderToString"
+    ],
+    "description": "just a word"
+  },
+  "renderToStream": {
+    "prefix": "renderToStream",
+    "body": [
+      "renderToStream"
+    ],
+    "description": "just a word"
+  },
+  "createBundleRenderer": {
+    "prefix": "createBundleRenderer",
+    "body": [
+      "createBundleRenderer"
+    ],
+    "description": "just a word"
+  },
+  "bundleRenderer.renderToString": {
+    "prefix": "bundleRenderer.renderToString",
+    "body": [
+      "bundleRenderer.renderToString"
+    ],
+    "description": "just a word"
+  },
+  "bundleRenderer.renderToStream": {
+    "prefix": "bundleRenderer.renderToStream",
+    "body": [
+      "bundleRenderer.renderToStream"
+    ],
+    "description": "just a word"
+  }
+}

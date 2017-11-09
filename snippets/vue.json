@@ -1,50 +1,68 @@
 {
-    "Vue Single File Component": {
-		"prefix": "vbase",
-		"body": [
-			"<template>",
-			"\t<div>",
-			"",
-			"\t</div>",
-			"</template>",
-			"",
-			"<script>",
-			"\texport default {",
-			"\t\t${0}",
-			"\t}",
-			"</script>",
-			"",
-			"<style scoped>",
-			"",
-			"</style>"
-		],
-		"description": "Base for Vue File"
-	},
-    "template": {
-        "prefix": "template",
-        "body": [
-            "<template>",
-            "\t$1",
-            "</template>"
-        ],
-        "description": "template element"
-    },
-    "script": {
-        "prefix": "script",
-        "body": [
-            "<script>",
-            "\t$1",
-            "</script>"
-        ],
-        "description": "script element"
-    },
-    "styleLang": {
-        "prefix": "styleLang",
-        "body": [
-            "<style lang=\"$1\">",
-            "\t$0",
-            "</style>"
-        ],
-        "description": "style element with lang attribute"
-    }
+  "base": {
+    "prefix": "vbase",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script>",
+      "\texport default {",
+      "\t\t${0}",
+      "\t}",
+      "</script>",
+      "",
+      "<style scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base for Vue File"
+  },
+  "template": {
+    "prefix": "template",
+    "body": [
+      "<template>",
+      "\t$1",
+      "</template>"
+    ],
+    "description": "template element"
+  },
+  "templatePug": {
+    "prefix": "templatePug",
+    "body": [
+      "<template lang=\"pug\">",
+      "\t$1",
+      "</template>"
+    ],
+    "description": "template element use pug"
+  },
+  "script": {
+    "prefix": "script",
+    "body": [
+      "<script>",
+      "\t$1",
+      "</script>"
+    ],
+    "description": "script element"
+  },
+  "style": {
+    "prefix": "style",
+    "body": [
+      "<style>",
+      "\t$1",
+      "</style>"
+    ],
+    "description": "style element"
+  },
+  "styleLang": {
+    "prefix": "styleLang",
+    "body": [
+      "<style lang=\"$1\">",
+      "\t$0",
+      "</style>"
+    ],
+    "description": "style element with lang attribute"
+  }
 }

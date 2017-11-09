@@ -1,38 +1,243 @@
 {
-  "Vue Data": {
-    "prefix": "vdata",
-    "body": ["data() {", "\treturn {", "\t\t${1:key}: ${2:value}", "\t}", "},"],
-    "description": "Vue Component Data"
-  },
-  "Vue Methods": {
-    "prefix": "vmethod",
-    "body": ["methods: {", "\t${1:name}() {", "\t\t${0}", "\t}", "},"],
-    "description": "vue method"
-  },
-  "Vue Computed": {
-    "prefix": "vcomputed",
+  "vImport": {
+    "prefix": "vImport",
     "body": [
-      "computed: {",
-      "\t${1:name}() {",
-      "\t\treturn this.${2:data} ${0}",
+      "import ${1:Name} from './components/${1:Name}'"
+    ],
+    "description": "Import one component into another"
+  },
+  "vImportLib": {
+    "prefix": "vImportLib",
+    "body": [
+      "import ${1:libName} from '${1:libName}'"
+    ],
+    "description": "import a library"
+  },
+  "vBaseWithComponent": {
+    "prefix": "vBaseWithComponent",
+    "body": [
+      "import ${1:Name} from '~components/${1:Name}'",
+      "",
+      "export default {",
+      "\tcomponents: {",
+      "\t\t${1:Name}",
+      "\t},",
+      "}"
+    ],
+    "description": "import a component and include it in export default"
+  },
+  "vNewVue": {
+    "prefix": "vNewVue",
+    "body": [
+      "new Vue({",
+      "\t$1",
+      "})"
+    ],
+    "description": "new Vue()"
+  },
+  "vConfigSilent": {
+    "prefix": "vConfigSilent",
+    "body": [
+      "Vue.config.silent = ${1:true}"
+    ],
+    "description": "Vue.config.silent"
+  },
+  "vConfigOptionMergeStrategies": {
+    "prefix": "vConfigOptionMergeStrategies",
+    "body": [
+      "Vue.config.optionMergeStrategies$1"
+    ],
+    "description": "Vue.config.optionMergeStrategies"
+  },
+  "vConfigDevtools": {
+    "prefix": "vConfigDevtools",
+    "body": [
+      "Vue.config.devtools = ${1:true}"
+    ],
+    "description": "Vue.config.devtools"
+  },
+  "vConfigErrorHandler": {
+    "prefix": "vConfigErrorHandler",
+    "body": [
+      "Vue.config.errorHandler = function (err, vm, info) {",
+      "\t${1:// handle error}",
+      "}"
+    ],
+    "description": "Vue.config.errorHandler"
+  },
+  "vConfigWarnHandler": {
+    "prefix": "vConfigWarnHandler",
+    "body": [
+      "Vue.config.warnHandler = function (msg, vm, trace) {",
+      "\t${1:// handle error}",
+      "}"
+    ],
+    "description": "Vue.config.warnHandler"
+  },
+  "vConfigIgnoredElements": {
+    "prefix": "vConfigIgnoredElements",
+    "body": [
+      "Vue.config.ignoredElements = [",
+      "\t'${1}'",
+      "]$0"
+    ],
+    "description": "Vue.config.ignoredElements"
+  },
+  "vConfigKeyCodes": {
+    "prefix": "vConfigKeyCodes",
+    "body": [
+      "Vue.config.keyCodes = {",
+      "\t${1:// camelCase won`t work}",
+      "}"
+    ],
+    "description": "Vue.config.keyCodes"
+  },
+  "vConfigPerformance": {
+    "prefix": "vConfigPerformance",
+    "body": [
+      "Vue.config.performance = ${1:true}"
+    ],
+    "description": "Vue.config.performance"
+  },
+  "vConfigProductionTip": {
+    "prefix": "vConfigProductionTip",
+    "body": [
+      "Vue.config.productionTip = ${1:false}"
+    ],
+    "description": "Vue.config.productionTip"
+  },
+  "vUse": {
+    "prefix": "vUse",
+    "body": [
+      "Vue.use(${1:plugin})$0"
+    ],
+    "description": "Vue.use( plugin )"
+  },
+  "vInstallDirective": {
+    "prefix": "vInstallDirective",
+    "body": [
+      "Vue.directive(${1:id}${2:, [definition]})"
+    ],
+    "description": "Vue.directive( id, [definition] )"
+  },
+  "vInstallFilter": {
+    "prefix": "vInstallFilter",
+    "body": [
+      "Vue.filter(${1:id}${2:, [definition]})"
+    ],
+    "description": "Vue.filter( id, [definition] )"
+  },
+  "vInstallComponent": {
+    "prefix": "vInstallComponent",
+    "body": [
+      "Vue.component(${1:id}${2:, [definition]})$0"
+    ],
+    "description": "Vue.component( id, [definition] )"
+  },
+  "vNextTick": {
+    "prefix": "vNextTick",
+    "body": [
+      "Vue.nextTick({",
+      "\t$1",
+      "})"
+    ],
+    "description": "Vue.nextTick( callback, [context] )"
+  },
+  "vSet": {
+    "prefix": "vSet",
+    "body": [
+      "Vue.set(${1:target}, ${2:key}, ${3:value})"
+    ],
+    "description": "Vue.set( target, key, value )"
+  },
+  "vDelete": {
+    "prefix": "vDelete",
+    "body": [
+      "Vue.delete(${1:target}, ${2:key})"
+    ],
+    "description": "Vue.delete( target, key )"
+  },
+  "vMixin": {
+    "prefix": "vMixin",
+    "body": [
+      "Vue.mixin(${1:mixin})"
+    ],
+    "description": "Vue.mixin( mixin )"
+  },
+  "vCompile": {
+    "prefix": "vCompile",
+    "body": [
+      "Vue.compile(${1:template})"
+    ],
+    "description": "Vue.compile( template )"
+  },
+  "vExtend": {
+    "prefix": "vExtend",
+    "body": [
+      "Vue.extend({",
+      "\ttemplate:${1:template}",
+      "})"
+    ],
+    "description": "Vue.extend( options )"
+  },
+  "vComponents": {
+    "prefix": "vComponents",
+    "body": [
+      "components: {",
+      "\t${0:componentsName},",
+      "},"
+    ],
+    "description": "vue components"
+  },
+  "vDirectives": {
+    "prefix": "vDirectives",
+    "body": [
+      "directives: {",
+      "\t$0",
+      "}),"
+    ],
+    "description": "vue directive"
+  },
+  "vDirective": {
+    "prefix": "vDirective",
+    "body": [
+      "${1:directiveName}: {",
+      "\tbind(el, binding, vnode) {",
+      "\t\t$0",
       "\t}",
       "},"
     ],
-    "description": "computed value"
+    "description": "vue directive item"
   },
-  "Vue Watchers": {
-    "prefix": "vwatcher",
+  "vFilters": {
+    "prefix": "vFilters",
     "body": [
-      "watch: {",
-      "\t${1:data}(${2:newValue}, ${3:oldValue}) {",
-      "\t\t${0}",
+      "filters: {",
+      "\t${1:fnName}: function(${2:value}) {",
+      "\t\treturn ${2:value}${0}",
       "\t}",
       "},"
     ],
-    "description": "vue watcher"
+    "description": "vue filter"
   },
-  "Vue Props with Default": {
-    "prefix": "vprops",
+  "vFilter": {
+    "prefix": "vFilter",
+    "body": [
+      "${1:fnName}: function(${2:value}) {",
+      "\treturn ${2:value}${0}",
+      "},"
+    ],
+    "description": "vue filter item"
+  },
+  "vMixins": {
+    "prefix": "vMixins",
+    "body": [
+      "mixins: [${1:mixinName}],"
+    ],
+    "description": "vue use mixin"
+  },
+  "vProps": {
+    "prefix": "vProps",
     "body": [
       "props: {",
       "\t${1:propName}: {",
@@ -43,271 +248,464 @@
     ],
     "description": "Vue Props with Default"
   },
-  "Vue Import File": {
-    "prefix": "vimport",
-    "body": ["import ${1:New} from './components/${1:New}.vue';"],
-    "description": "Import one component into another"
-  },
-  "Vue Import into the Component": {
-    "prefix": "vimport-c",
-    "body": ["components: {", "\t${1:New},", "}"],
-    "description": "Import one component into another, within export statement"
-  },
-  "Vue Import Export": {
-    "prefix": "vimport-export",
+  "vProp": {
+    "prefix": "vProp",
     "body": [
-      "import ${1:Name} from '~components/${1:Name}.vue'",
-      "",
-      "export default {",
-      "\tcomponents: {",
-      "\t\t${1:Name}",
-      "\t},",
-      "}"
+      "${1:propName}: {",
+      "\ttype: ${2:number},",
+      "\tdefault: ${0}",
+      "},"
     ],
-    "description": "import a component and include it in export default"
+    "description": "Vue Prop with Default"
   },
-  "Vue Filter": {
-    "prefix": "vfilter",
+  "vData": {
+    "prefix": "vData",
     "body": [
-      "filters: {",
-      "\t${1:fnName}: function(${2:value}) {",
-      "\t\treturn ${2:value}${0};",
+      "data() {",
+      "\treturn {",
+      "\t\t${1:key}: ${2:value}",
       "\t}",
-      "}"
+      "},"
     ],
-    "description": "vue filter"
+    "description": "Vue Component Data"
   },
-  "Vue Mixin": {
-    "prefix": "vmixin",
+  "vComputed": {
+    "prefix": "vComputed",
     "body": [
-      "const ${1:mixinName} = {",
-      "\tmounted() {",
-      "\t\tconsole.log('hello from mixin!')",
+      "computed: {",
+      "\t${1:name}() {",
+      "\t\treturn this.${2:data} ${0}",
       "\t},",
-      "}"
+      "},"
     ],
-    "description": "vue mixin"
+    "description": "computed"
   },
-  "Vue Use Mixin": {
-    "prefix": "vmixin-use",
-    "body": ["mixins: [${1:mixinName}]"],
-    "description": "vue use mixin"
-  },
-  "Vue Custom Directive": {
-    "prefix": "vc-direct",
+  "vComputedItem": {
+    "prefix": "vComputedItem",
     "body": [
-      "Vue.directive('${1:directiveName}', {",
-      "\tbind(el, binding, vnode) {",
-      "\t\tel.style.${2:arg} = binding.value.${2:arg};",
-      "\t}",
-      "});"
+      "${1:name}() {",
+      "\treturn this.${2:data} ${0}",
+      "},"
     ],
-    "description": "vue custom directive"
+    "description": "computed value"
   },
-  "Vue Import Library": {
-    "prefix": "vimport-lib",
-    "body": ["import { ${1:libName} } from '${1:libName}'"],
-    "description": "import a library"
+  "vWatch": {
+    "prefix": "vWatch",
+    "body": [
+      "watch: {",
+      "\t${1:data}(${2:newValue}, ${3:oldValue}) {",
+      "\t\t${0}",
+      "\t},",
+      "},"
+    ],
+    "description": "vue watch"
   },
-  "Vue Transition Methods with JavaScript Hooks": {
-    "prefix": "vanimhook-js",
+  "vWatchItem": {
+    "prefix": "vWatchItem",
+    "body": [
+      "${1:data}(${2:newValue}, ${3:oldValue}) {",
+      "\t${0}",
+      "},"
+    ],
+    "description": "vue watch item"
+  },
+  "vMethods": {
+    "prefix": "vMethods",
+    "body": [
+      "methods: {",
+      "\t${1:name}() {",
+      "\t\t${0}",
+      "\t},",
+      "},"
+    ],
+    "description": "vue methods"
+  },
+  "vMethod": {
+    "prefix": "vMethod",
+    "body": [
+      "${1:name}() {",
+      "\t${0}",
+      "},"
+    ],
+    "description": "vue method"
+  },
+  "vTransitionAnimHook": {
+    "prefix": "vTransitionAnimHook",
     "body": [
       "beforeEnter(el) {",
-      "\tconsole.log('beforeEnter');",
+      "\tconsole.log('beforeEnter')",
       "},",
       "enter(el, done) {",
-      "\tconsole.log('enter');",
-      "\tdone();",
+      "\tconsole.log('enter')",
+      "\tdone()",
       "},",
       "beforeLeave(el) {",
-      "\tconsole.log('beforeLeave');",
+      "\tconsole.log('beforeLeave')",
       "},",
       "leave(el, done) {",
-      "\tconsole.log('leave');",
-      "\tdone();",
+      "\tconsole.log('leave')",
+      "\tdone()",
       "},"
     ],
     "description": "transition component js hooks"
   },
-  "Incrementer": {
-    "prefix": "vinc",
-    "body": ["return ${1:this.num} += ${2:1}"],
-    "description": "increment"
-  },
-  "Decrementer": {
-    "prefix": "vdec",
-    "body": ["return ${1:this.num} -= ${2:1}"],
-    "description": "decrement"
-  },
-  "vm.$data": {
-    "prefix": "vmData",
+  "vm-data": {
+    "prefix": "vm-data",
     "body": [
-        "${1:vm}.\\$data$2"
+      "${1:vm}.\\$data$2"
     ],
     "description": "Type: Object"
   },
-  "vm.$props": {
-      "prefix": "vmProps",
-      "body": [
-          "${1:vm}.\\$props$2"
-      ],
-      "description": "Type: Object"
+  "vm-props": {
+    "prefix": "vm-props",
+    "body": [
+      "${1:vm}.\\$props$2"
+    ],
+    "description": "Type: Object"
   },
-  "vm.$el": {
-      "prefix": "vmEl",
-      "body": [
-          "${1:vm}.\\$el$2"
-      ],
-      "description": "Type: HTMLElement"
+  "vm-el": {
+    "prefix": "vm-el",
+    "body": [
+      "${1:vm}.\\$el$2"
+    ],
+    "description": "Type: HTMLElement"
   },
-  "vm.$options": {
-      "prefix": "vmOptions",
-      "body": [
-          "${1:vm}.\\$options$2"
-      ],
-      "description": "Type: Object"
+  "vm-options": {
+    "prefix": "vm-options",
+    "body": [
+      "${1:vm}.\\$options$2"
+    ],
+    "description": "Type: Object"
   },
-  "vm.$parent": {
-      "prefix": "vmParent",
-      "body": [
-          "${1:vm}.\\$parent$2"
-      ],
-      "description": "Type: Vue instance"
+  "vm-parent": {
+    "prefix": "vm-parent",
+    "body": [
+      "${1:vm}.\\$parent$2"
+    ],
+    "description": "Type: Vue instance"
   },
-  "vm.$root": {
-      "prefix": "vmRoot",
-      "body": [
-          "${1:vm}.\\$root$2"
-      ],
-      "description": "Type: Vue instance"
+  "vm-root": {
+    "prefix": "vm-root",
+    "body": [
+      "${1:vm}.\\$root$2"
+    ],
+    "description": "Type: Vue instance"
   },
-  "vm.$children": {
-      "prefix": "vmChildren",
-      "body": [
-          "${1:vm}.\\$children$2"
-      ],
-      "description": "Type: Array<Vue instance>"
+  "vm-children": {
+    "prefix": "vm-children",
+    "body": [
+      "${1:vm}.\\$children$2"
+    ],
+    "description": "Type: Array<Vue instance>"
   },
-  "vm.$slots": {
-      "prefix": "vmSlots",
-      "body": [
-          "${1:vm}.\\$slots$2"
-      ],
-      "description": "Type: Object"
+  "vm-slots": {
+    "prefix": "vm-slots",
+    "body": [
+      "${1:vm}.\\$slots$2"
+    ],
+    "description": "Type: Object"
   },
-  "vm.$scopedSlots": {
-      "prefix": "vmScopedSlots",
-      "body": [
-          "\\$this.\\$scopedSlots.default({",
-          "\t",
-          "})"
-      ],
-      "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
+  "vm-scoped-slots": {
+    "prefix": "vm-scoped-slots",
+    "body": [
+      "\\$this.\\$scopedSlots.default({",
+      "\t",
+      "})"
+    ],
+    "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
   },
-  "vm.$refs": {
-      "prefix": "vmRefs",
-      "body": [
-          "${1:vm}.\\$refs$2"
-      ],
-      "description": "Type: Object"
+  "vm-refs": {
+    "prefix": "vm-refs",
+    "body": [
+      "${1:vm}.\\$refs$2"
+    ],
+    "description": "Type: Object"
   },
-  "vm.$isServer": {
-      "prefix": "vmIsServer",
-      "body": [
-          "${1:vm}.\\$isServer$2"
-      ],
-      "description": "Type: boolean"
+  "vm-is-server": {
+    "prefix": "vm-is-server",
+    "body": [
+      "${1:vm}.\\$isServer$2"
+    ],
+    "description": "Type: boolean"
   },
-  "vm.$attrs": {
-      "prefix": "vmAttrs",
-      "body": [
-          "${1:vm}.\\$attrs$2"
-      ],
-      "description": "Type: { [key: string]: string }"
+  "vm-attrs": {
+    "prefix": "vm-attrs",
+    "body": [
+      "${1:vm}.\\$attrs$2"
+    ],
+    "description": "Type: { [key: string]: string }"
   },
-  "vm.$listeners": {
-      "prefix": "vmListeners",
-      "body": [
-          "${1:vm}.\\$listeners$2"
-      ],
-      "description": "Type: { [key: string]: Function | Array<Function> }"
+  "vm-listeners": {
+    "prefix": "vm-listeners",
+    "body": [
+      "${1:vm}.\\$listeners$2"
+    ],
+    "description": "Type: { [key: string]: Function | Array<Function> }"
   },
-  "vm.$watch": {
-      "prefix": "vmWatch",
-      "body": [
-          "${1:vm}.\\$watch(${2:expOrFn}, ${3:callback})"
-      ],
-      "description": "vm.$watch( expOrFn, callback, [options] )"
+  "vm-watch": {
+    "prefix": "vm-watch",
+    "body": [
+      "${1:vm}.\\$watch(${2:expOrFn}, ${3:callback})"
+    ],
+    "description": "vm.$watch( expOrFn, callback, [options] )"
   },
-  "vm.$set": {
-      "prefix": "vmSet",
-      "body": [
-          "${1:vm}.\\$set(${2:object}, ${3:key}, ${4:value})"
-      ],
-      "description": "vm.$set( object, key, value )"
+  "vm-set": {
+    "prefix": "vm-set",
+    "body": [
+      "${1:vm}.\\$set(${2:object}, ${3:key}, ${4:value})"
+    ],
+    "description": "vm.$set( object, key, value )"
   },
-  "vm.$delete": {
-      "prefix": "vmDelete",
-      "body": [
-          "${1:vm}.\\$delete(${2:object}, ${3:key})"
-      ],
-      "description": "vm.$delete( object, key )"
+  "vm-delete": {
+    "prefix": "vm-delete",
+    "body": [
+      "${1:vm}.\\$delete(${2:object}, ${3:key})"
+    ],
+    "description": "vm.$delete( object, key )"
   },
-
-  "vm.$on": {
-      "prefix": "vmOn",
-      "body": [
-          "${1:vm}.\\$on('${2:event}', ${3:callback})$4"
-      ],
-      "description": "vm.$on( event, callback )"
+  "vm-on": {
+    "prefix": "vm-on",
+    "body": [
+      "${1:vm}.\\$on('${2:event}', ${3:callback})$4"
+    ],
+    "description": "vm.$on( event, callback )"
   },
-  "vm.$once": {
-      "prefix": "vmOnce",
-      "body": [
-          "${1:vm}.\\$once('${2:event}', ${3:callback})$4"
-      ],
-      "description": "vm.$once( event, callback )"
+  "vm-once": {
+    "prefix": "vm-once",
+    "body": [
+      "${1:vm}.\\$once('${2:event}', ${3:callback})$4"
+    ],
+    "description": "vm.$once( event, callback )"
   },
-  "vm.$off": {
-      "prefix": "vmOff",
-      "body": [
-          "${1:vm}.\\$off('${2:event}', ${3:callback})$4"
-      ],
-      "description": "vm.$off( [event, callback] )"
+  "vm-off": {
+    "prefix": "vm-off",
+    "body": [
+      "${1:vm}.\\$off('${2:event}', ${3:callback})$4"
+    ],
+    "description": "vm.$off( [event, callback] )"
   },
-  "vm.$emit": {
-      "prefix": "vmEmit",
-      "body": [
-          "${1:vm}.\\$emit('${2:event}'${3:, […args]})$4"
-      ],
-      "description": "vm.$emit( event, […args] )"
+  "vm-emit": {
+    "prefix": "vm-emit",
+    "body": [
+      "${1:vm}.\\$emit('${2:event}'${3:, […args]})$4"
+    ],
+    "description": "vm.$emit( event, […args] )"
   },
-  "vm.$mount": {
-      "prefix": "vmMount",
-      "body": [
-          "${1:vm}.\\$mount('$2')"
-      ],
-      "description": "vm.$mount( [elementOrSelector] )"
+  "vm-mount": {
+    "prefix": "vm-mount",
+    "body": [
+      "${1:vm}.\\$mount('$2')"
+    ],
+    "description": "vm.$mount( [elementOrSelector] )"
   },
-  "vm.$forceUpdate": {
-      "prefix": "vmForceUpdate",
-      "body": [
-          "${1:vm}.\\$forceUpdate()"
-      ],
-      "description": "vm.$forceUpdate()"
+  "vm-force-update": {
+    "prefix": "vm-force-update",
+    "body": [
+      "${1:vm}.\\$forceUpdate()"
+    ],
+    "description": "vm.$forceUpdate()"
   },
-  "vm.$nextTick": {
-      "prefix": "vmNextTick",
-      "body": [
-          "${1:vm}.\\$nextTick(${2:callback})"
-      ],
-      "description": "vm.$nextTick( callback )"
+  "vm-next-tick": {
+    "prefix": "vm-next-tick",
+    "body": [
+      "${1:vm}.\\$nextTick(${2:callback})"
+    ],
+    "description": "vm.$nextTick( callback )"
   },
-  "vm.$destroy": {
-      "prefix": "vmDestroy",
-      "body": [
-          "${1:vm}.\\$destroy()$2"
-      ],
-      "description": "vm.$destroy()"
+  "vm-destroy": {
+    "prefix": "vm-destroy",
+    "body": [
+      "${1:vm}.\\$destroy()$2"
+    ],
+    "description": "vm.$destroy()"
+  },
+  "propsData": {
+    "prefix": "propsData",
+    "body": [
+      "propsData"
+    ],
+    "description": "just a word"
+  },
+  "scopedSlots": {
+    "prefix": "scopedSlots",
+    "body": [
+      "scopedSlots"
+    ],
+    "description": "just a word"
+  },
+  "computed": {
+    "prefix": "computed",
+    "body": [
+      "computed"
+    ],
+    "description": "just a word"
+  },
+  "render": {
+    "prefix": "render",
+    "body": [
+      "render"
+    ],
+    "description": "just a word"
+  },
+  "beforeCreate": {
+    "prefix": "beforeCreate",
+    "body": [
+      "beforeCreate"
+    ],
+    "description": "just a word"
+  },
+  "created": {
+    "prefix": "created",
+    "body": [
+      "created"
+    ],
+    "description": "just a word"
+  },
+  "beforeMount": {
+    "prefix": "beforeMount",
+    "body": [
+      "beforeMount"
+    ],
+    "description": "just a word"
+  },
+  "mounted": {
+    "prefix": "mounted",
+    "body": [
+      "mounted"
+    ],
+    "description": "just a word"
+  },
+  "beforeUpdate": {
+    "prefix": "beforeUpdate",
+    "body": [
+      "beforeUpdate"
+    ],
+    "description": "just a word"
+  },
+  "updated": {
+    "prefix": "updated",
+    "body": [
+      "updated"
+    ],
+    "description": "just a word"
+  },
+  "activated": {
+    "prefix": "activated",
+    "body": [
+      "activated"
+    ],
+    "description": "just a word"
+  },
+  "deactivated": {
+    "prefix": "deactivated",
+    "body": [
+      "deactivated"
+    ],
+    "description": "just a word"
+  },
+  "beforeDestroy": {
+    "prefix": "beforeDestroy",
+    "body": [
+      "beforeDestroy"
+    ],
+    "description": "just a word"
+  },
+  "destroyed": {
+    "prefix": "destroyed",
+    "body": [
+      "destroyed"
+    ],
+    "description": "just a word"
+  },
+  "directives": {
+    "prefix": "directives",
+    "body": [
+      "directives"
+    ],
+    "description": "just a word"
+  },
+  "filters": {
+    "prefix": "filters",
+    "body": [
+      "filters"
+    ],
+    "description": "just a word"
+  },
+  "component": {
+    "prefix": "component",
+    "body": [
+      "component"
+    ],
+    "description": "just a word"
+  },
+  "components": {
+    "prefix": "components",
+    "body": [
+      "components"
+    ],
+    "description": "just a word"
+  },
+  "mixins": {
+    "prefix": "mixins",
+    "body": [
+      "mixins"
+    ],
+    "description": "just a word"
+  },
+  "extends": {
+    "prefix": "extends",
+    "body": [
+      "extends"
+    ],
+    "description": "just a word"
+  },
+  "provide": {
+    "prefix": "provide",
+    "body": [
+      "provide"
+    ],
+    "description": "just a word"
+  },
+  "inject": {
+    "prefix": "inject",
+    "body": [
+      "inject"
+    ],
+    "description": "just a word"
+  },
+  "delimiters": {
+    "prefix": "delimiters",
+    "body": [
+      "delimiters"
+    ],
+    "description": "just a word"
+  },
+  "functional": {
+    "prefix": "functional",
+    "body": [
+      "functional"
+    ],
+    "description": "just a word"
+  },
+  "model": {
+    "prefix": "model",
+    "body": [
+      "model"
+    ],
+    "description": "just a word"
+  },
+  "inheritAttrs": {
+    "prefix": "inheritAttrs",
+    "body": [
+      "inheritAttrs"
+    ],
+    "description": "just a word"
+  },
+  "comments": {
+    "prefix": "comments",
+    "body": [
+      "comments"
+    ],
+    "description": "just a word"
   }
 }

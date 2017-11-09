@@ -6,7 +6,7 @@
 	"icon": "asset/vue.png",
 	"description": "A Vue Snippets Extension",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.5.0"
 	},
@@ -30,8 +30,16 @@
 	"contributes": {
 		"snippets": [
 			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
 				"language": "javascript",
 				"path": "./snippets/vue-script.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script-router.json"
 			},
 			{
 				"language": "javascript",
@@ -39,7 +47,7 @@
 			},
 			{
 				"language": "javascript",
-				"path": "./snippets/vue-script-word.json"
+				"path": "./snippets/vue-script-ssr.json"
 			},
 			{
 				"language": "typescript",
@@ -47,23 +55,39 @@
 			},
 			{
 				"language": "typescript",
+				"path": "./snippets/vue-script-router.json"
+			},
+			{
+				"language": "typescript",
 				"path": "./snippets/vue-script-vuex.json"
 			},
 			{
 				"language": "typescript",
-				"path": "./snippets/vue-script-word.json"
+				"path": "./snippets/vue-script-ssr.json"
 			},
 			{
 				"language": "html",
 				"path": "./snippets/vue-template.json"
 			},
 			{
-				"language": "vue",
-				"path": "./snippets/vue.json"
+				"language": "html",
+				"path": "./snippets/vue-template-router.json"
 			},
 			{
 				"language": "jade",
 				"path": "./snippets/vue-template-pug.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/vue-template.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/vue-template-router-pug.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/vue-template-router.json"
 			}
 		]
 	}
