@@ -4,14 +4,14 @@
     "body": [
       "const ${1:router} = new VueRouter({",
       "\t$2",
-      "})$0"
+      "})"
     ],
     "description": "const router = newVueRouter({ })"
   },
   "vRoutes": {
     "prefix": "vRoutes",
     "body": [
-      "routes: [$1]$0"
+      "routes: [$1]"
     ],
     "description": "routes: []"
   },
@@ -20,7 +20,7 @@
     "body": [
       "${1:router}.beforeEach((to, from, next) => {",
       "\t${2:// to and from are both route objects}",
-      "})$0"
+      "})"
     ],
     "description": "router.beforeEach"
   },
@@ -63,21 +63,21 @@
   "vrouter-push": {
     "prefix": "vrouter-push",
     "body": [
-      "${1:router}.push($2)$0"
+      "${1:router}.push($2)"
     ],
     "description": "router.push()"
   },
   "vrouter-replace": {
     "prefix": "vrouter-replace",
     "body": [
-      "${1:router}.replace($2)$0"
+      "${1:router}.replace($2)"
     ],
     "description": "router.replace()"
   },
   "vrouter-go": {
     "prefix": "vrouter-go",
     "body": [
-      "${1:router}.go($2)$0"
+      "${1:router}.go($2)"
     ],
     "description": "router.go()"
   },

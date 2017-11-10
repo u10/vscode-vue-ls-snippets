@@ -11,7 +11,7 @@
     "prefix": "vIf",
     "body": [
       "${1:div}(v-if=\"${2:condition}\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vfor statement"
   },
@@ -19,7 +19,7 @@
     "prefix": "vIfWithKey",
     "body": [
       "${1:div}(v-if=\"${2:condition}\" key=\"${3:key}\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vfor statement"
   },
@@ -27,15 +27,15 @@
     "prefix": "vElseIf",
     "body": [
       "${1:div}(v-else-if=\"${2:condition}\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vfor statement"
   },
   "vElseIfWithKey": {
     "prefix": "vElseIfWithKey",
     "body": [
-      "${1:div} v-else-if=\"${2:condition}\" key=\"${3:key}\"",
-      "\t$0"
+      "${1:div}(v-else-if=\"${2:condition}\" key=\"${3:key}\")",
+      "\t"
     ],
     "description": "vfor statement"
   },
@@ -43,7 +43,7 @@
     "prefix": "vElse",
     "body": [
       "${1:div}(v-else)",
-      "\t$0"
+      "\t"
     ],
     "description": "vfor statement"
   },
@@ -51,7 +51,7 @@
     "prefix": "vElseWithKey",
     "body": [
       "${1:div}(v-else key=\"${2:key}\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vfor statement"
   },
@@ -73,7 +73,7 @@
     "prefix": "vElProps",
     "body": [
       "${1:component}(:${2:propName}=\"${3:propValue}\")",
-      "\t$0"
+      "\t"
     ],
     "description": "component element with props"
   },
@@ -88,15 +88,15 @@
     "prefix": "vClass",
     "body": [
       "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vue class binding"
   },
   "vClassObj": {
     "prefix": "vClassObj",
     "body": [
-      "${1:div} :class=\"[${2:classNameA}, ${3:classNameB}]\")",
-      "\t$0"
+      "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
+      "\t"
     ],
     "description": "vue class binding"
   },
@@ -104,7 +104,7 @@
     "prefix": "vClassObjMult",
     "body": [
       "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vue multiple conditional class bindings"
   },
@@ -112,7 +112,7 @@
     "prefix": "vStyle",
     "body": [
       "${1:div}(:style=\"{ fontSize: ${2:data} + 'px' }\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vue inline style binding"
   },
@@ -120,14 +120,14 @@
     "prefix": "vStyleObj",
     "body": [
       "${1:div}(:style=\"[${2:styleObjectA}, ${3:styleObjectB]}\")",
-      "\t$0"
+      "\t"
     ],
     "description": "vue inline style binding, objects"
   },
   "Transition": {
     "prefix": "Transition",
     "body": [
-      "transition$0"
+      "transition"
     ],
     "description": "transition element"
   },
@@ -141,14 +141,14 @@
       "\t@before-leave=\"beforeLeave\"",
       "\t@leave=\"leave\"",
       "\t:css=\"false\")",
-      "\t$0"
+      "\t"
     ],
     "description": "transition component js hooks"
   },
   "TransitionGroup": {
     "prefix": "TransitionGroup",
     "body": [
-      "transition-group$0"
+      "transition-group"
     ],
     "description": "transition-group element"
   },
@@ -162,14 +162,14 @@
   "Component": {
     "prefix": "Component",
     "body": [
-      "component(:is=\"${1:componentId}\") $0"
+      "component(:is=\"${1:componentId}\") "
     ],
     "description": "component element"
   },
   "KeepAlive": {
     "prefix": "KeepAlive",
     "body": [
-      "keep-alive$0"
+      "keep-alive"
     ],
     "description": "keep-alive element"
   }

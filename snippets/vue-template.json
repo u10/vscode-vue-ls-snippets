@@ -79,7 +79,7 @@
   "v-bind": {
     "prefix": "v-bind",
     "body": [
-      "v-bind$1=\"${2}\""
+      "v-bind:$1=\"${2}\""
     ],
     "description": "Expects: any (with argument) | Object (without argument)"
   },
@@ -128,161 +128,161 @@
   "ref": {
     "prefix": "ref",
     "body": [
-      "ref=\"${1:reference}\"$0"
+      "ref=\"${1:reference}\""
     ],
     "description": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance."
   },
   "slot": {
     "prefix": "slot",
     "body": [
-      "slot=\"$1\"$0"
+      "slot=\"$1\""
     ],
     "description": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
   },
   "enter-class": {
     "prefix": "enter-class",
     "body": [
-      "enter-class=\"$1\"$0"
+      "enter-class=\"$1\""
     ],
     "description": "enter-class=''. Expects: string."
   },
   "leave-class": {
     "prefix": "leave-class",
     "body": [
-      "leave-class=\"$1\"$0"
+      "leave-class=\"$1\""
     ],
     "description": "leave-class=''. Expects: string."
   },
   "appear-class": {
     "prefix": "appear-class",
     "body": [
-      "appear-class=\"$1\"$0"
+      "appear-class=\"$1\""
     ],
     "description": "appear-class=''. Expects: string."
   },
   "enter-to-class": {
     "prefix": "enter-to-class",
     "body": [
-      "enter-to-class=\"$1\"$0"
+      "enter-to-class=\"$1\""
     ],
     "description": "enter-to-class=''. Expects: string."
   },
   "leave-to-class": {
     "prefix": "leave-to-class",
     "body": [
-      "leave-to-class=\"$1\"$0"
+      "leave-to-class=\"$1\""
     ],
     "description": "leave-to-class=''. Expects: string."
   },
   "appear-to-class": {
     "prefix": "appear-to-class",
     "body": [
-      "appear-to-class=\"$1\"$0"
+      "appear-to-class=\"$1\""
     ],
     "description": "appear-to-class=''. Expects: string."
   },
   "enter-active-class": {
     "prefix": "enter-active-class",
     "body": [
-      "enter-active-class=\"$1\"$0"
+      "enter-active-class=\"$1\""
     ],
     "description": "enter-active-class=''. Expects: string."
   },
   "leave-active-class": {
     "prefix": "leave-active-class",
     "body": [
-      "leave-active-class=\"$1\"$0"
+      "leave-active-class=\"$1\""
     ],
     "description": "leave-active-class=''. Expects: string."
   },
   "appear-active-class": {
     "prefix": "appear-active-class",
     "body": [
-      "appear-active-class=\"$1\"$0"
+      "appear-active-class=\"$1\""
     ],
     "description": "appear-active-class=''. Expects: string."
   },
   "before-enter": {
     "prefix": "before-enter-event",
     "body": [
-      "@before-enter=\"$1\"$0"
+      "@before-enter=\"$1\""
     ],
     "description": "@before-enter=''"
   },
   "before-leave": {
     "prefix": "befor-eleave-event",
     "body": [
-      "@before-leave=\"$1\"$0"
+      "@before-leave=\"$1\""
     ],
     "description": "@before-leave=''"
   },
   "before-appear": {
     "prefix": "before-appear-event",
     "body": [
-      "@before-appear=\"$1\"$0"
+      "@before-appear=\"$1\""
     ],
     "description": "@before-appear=''"
   },
   "enter": {
     "prefix": "enter-event",
     "body": [
-      "@enter=\"$1\"$0"
+      "@enter=\"$1\""
     ],
     "description": "@enter=''"
   },
   "leave": {
     "prefix": "leave-event",
     "body": [
-      "@leave=\"$1\"$0"
+      "@leave=\"$1\""
     ],
     "description": "@leave=''"
   },
   "appear": {
     "prefix": "appear-event",
     "body": [
-      "@appear=\"$1\"$0"
+      "@appear=\"$1\""
     ],
     "description": "@appear=''"
   },
   "after-enter": {
     "prefix": "after-enter-event",
     "body": [
-      "@after-enter=\"$1\"$0"
+      "@after-enter=\"$1\""
     ],
     "description": "@after-enter=''"
   },
   "after-leave": {
     "prefix": "after-leave-event",
     "body": [
-      "@after-leave=\"$1\"$0"
+      "@after-leave=\"$1\""
     ],
     "description": "@after-leave=''"
   },
   "after-appear": {
     "prefix": "after-appear-event",
     "body": [
-      "@after-appear=\"$1\"$0"
+      "@after-appear=\"$1\""
     ],
     "description": "@after-appear=''"
   },
   "enter-cancelled": {
     "prefix": "enter-cancelled-event",
     "body": [
-      "@enter-cancelled=\"$1\"$0"
+      "@enter-cancelled=\"$1\""
     ],
     "description": "@enter-cancelled=''"
   },
   "leave-cancelled": {
     "prefix": "leave-cancelled-event",
     "body": [
-      "@leave-cancelled=\"$1\"$0"
+      "@leave-cancelled=\"$1\""
     ],
     "description": "@leave-cancelled='' (v-show only)"
   },
   "appear-cancelled": {
     "prefix": "appear-cancelled-event",
     "body": [
-      "@appear-cancelled=\"$1\"$0"
+      "@appear-cancelled=\"$1\""
     ],
     "description": "@appear-cancelled=''"
   },
@@ -429,7 +429,7 @@
     "body": [
       "<transition$1>",
       "\t$0",
-      "</transition>$0"
+      "</transition>"
     ],
     "description": "transition element"
   },
@@ -460,14 +460,14 @@
   "Slot": {
     "prefix": "Slot",
     "body": [
-      "<slot$1>$2</slot>$0"
+      "<slot$1>$2</slot>"
     ],
     "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
   },
   "Component": {
     "prefix": "Component",
     "body": [
-      "<component :is=\"${1:componentId}\"></component>$0"
+      "<component :is=\"${1:componentId}\"></component>"
     ],
     "description": "component element"
   },
@@ -476,7 +476,7 @@
     "body": [
       "<keep-alive$1>",
       "\t$0",
-      "</keep-alive>$0"
+      "</keep-alive>"
     ],
     "description": "keep-alive element"
   }

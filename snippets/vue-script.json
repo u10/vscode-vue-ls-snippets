@@ -16,7 +16,7 @@
   "vBaseWithComponent": {
     "prefix": "vBaseWithComponent",
     "body": [
-      "import ${1:Name} from '~components/${1:Name}'",
+      "import ${1:Name} from '@/components/${1:Name}'",
       "",
       "export default {",
       "\tcomponents: {",
@@ -45,7 +45,7 @@
   "vConfigOptionMergeStrategies": {
     "prefix": "vConfigOptionMergeStrategies",
     "body": [
-      "Vue.config.optionMergeStrategies$1"
+      "Vue.config.optionMergeStrategies"
     ],
     "description": "Vue.config.optionMergeStrategies"
   },
@@ -79,7 +79,7 @@
     "body": [
       "Vue.config.ignoredElements = [",
       "\t'${1}'",
-      "]$0"
+      "]"
     ],
     "description": "Vue.config.ignoredElements"
   },
@@ -109,7 +109,7 @@
   "vUse": {
     "prefix": "vUse",
     "body": [
-      "Vue.use(${1:plugin})$0"
+      "Vue.use(${1:plugin})"
     ],
     "description": "Vue.use( plugin )"
   },
@@ -130,7 +130,7 @@
   "vInstallComponent": {
     "prefix": "vInstallComponent",
     "body": [
-      "Vue.component(${1:id}${2:, [definition]})$0"
+      "Vue.component(${1:id}${2:, [definition]})"
     ],
     "description": "Vue.component( id, [definition] )"
   },
@@ -194,7 +194,7 @@
     "body": [
       "directives: {",
       "\t$0",
-      "}),"
+      "},"
     ],
     "description": "vue directive"
   },
@@ -352,56 +352,56 @@
   "vm-data": {
     "prefix": "vm-data",
     "body": [
-      "${1:vm}.\\$data$2"
+      "${1:vm}.\\$data"
     ],
     "description": "Type: Object"
   },
   "vm-props": {
     "prefix": "vm-props",
     "body": [
-      "${1:vm}.\\$props$2"
+      "${1:vm}.\\$props"
     ],
     "description": "Type: Object"
   },
   "vm-el": {
     "prefix": "vm-el",
     "body": [
-      "${1:vm}.\\$el$2"
+      "${1:vm}.\\$el"
     ],
     "description": "Type: HTMLElement"
   },
   "vm-options": {
     "prefix": "vm-options",
     "body": [
-      "${1:vm}.\\$options$2"
+      "${1:vm}.\\$options"
     ],
     "description": "Type: Object"
   },
   "vm-parent": {
     "prefix": "vm-parent",
     "body": [
-      "${1:vm}.\\$parent$2"
+      "${1:vm}.\\$parent"
     ],
     "description": "Type: Vue instance"
   },
   "vm-root": {
     "prefix": "vm-root",
     "body": [
-      "${1:vm}.\\$root$2"
+      "${1:vm}.\\$root"
     ],
     "description": "Type: Vue instance"
   },
   "vm-children": {
     "prefix": "vm-children",
     "body": [
-      "${1:vm}.\\$children$2"
+      "${1:vm}.\\$children"
     ],
     "description": "Type: Array<Vue instance>"
   },
   "vm-slots": {
     "prefix": "vm-slots",
     "body": [
-      "${1:vm}.\\$slots$2"
+      "${1:vm}.\\$slots"
     ],
     "description": "Type: Object"
   },
@@ -409,7 +409,7 @@
     "prefix": "vm-scoped-slots",
     "body": [
       "\\$this.\\$scopedSlots.default({",
-      "\t",
+      "\t$0",
       "})"
     ],
     "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
@@ -417,28 +417,28 @@
   "vm-refs": {
     "prefix": "vm-refs",
     "body": [
-      "${1:vm}.\\$refs$2"
+      "${1:vm}.\\$refs"
     ],
     "description": "Type: Object"
   },
   "vm-is-server": {
     "prefix": "vm-is-server",
     "body": [
-      "${1:vm}.\\$isServer$2"
+      "${1:vm}.\\$isServer"
     ],
     "description": "Type: boolean"
   },
   "vm-attrs": {
     "prefix": "vm-attrs",
     "body": [
-      "${1:vm}.\\$attrs$2"
+      "${1:vm}.\\$attrs"
     ],
     "description": "Type: { [key: string]: string }"
   },
   "vm-listeners": {
     "prefix": "vm-listeners",
     "body": [
-      "${1:vm}.\\$listeners$2"
+      "${1:vm}.\\$listeners"
     ],
     "description": "Type: { [key: string]: Function | Array<Function> }"
   },
@@ -466,28 +466,28 @@
   "vm-on": {
     "prefix": "vm-on",
     "body": [
-      "${1:vm}.\\$on('${2:event}', ${3:callback})$4"
+      "${1:vm}.\\$on('${2:event}', ${3:callback})"
     ],
     "description": "vm.$on( event, callback )"
   },
   "vm-once": {
     "prefix": "vm-once",
     "body": [
-      "${1:vm}.\\$once('${2:event}', ${3:callback})$4"
+      "${1:vm}.\\$once('${2:event}', ${3:callback})"
     ],
     "description": "vm.$once( event, callback )"
   },
   "vm-off": {
     "prefix": "vm-off",
     "body": [
-      "${1:vm}.\\$off('${2:event}', ${3:callback})$4"
+      "${1:vm}.\\$off('${2:event}', ${3:callback})"
     ],
     "description": "vm.$off( [event, callback] )"
   },
   "vm-emit": {
     "prefix": "vm-emit",
     "body": [
-      "${1:vm}.\\$emit('${2:event}'${3:, […args]})$4"
+      "${1:vm}.\\$emit('${2:event}'${3:, […args]})"
     ],
     "description": "vm.$emit( event, […args] )"
   },
@@ -515,7 +515,7 @@
   "vm-destroy": {
     "prefix": "vm-destroy",
     "body": [
-      "${1:vm}.\\$destroy()$2"
+      "${1:vm}.\\$destroy()"
     ],
     "description": "vm.$destroy()"
   },

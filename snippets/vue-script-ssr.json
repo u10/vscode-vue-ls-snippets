@@ -2,7 +2,7 @@
   "vSsrRenderer": {
     "prefix": "vSsrRenderer",
     "body": [
-        "const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
+        "const ${1:renderer} = require('vue-server-renderer').createRenderer()"
     ],
     "description": "require('vue-server-renderer').createRenderer()"
   },
