@@ -1,20 +1,20 @@
 {
-  "RouterView": {
-    "prefix": "RouterView",
+  "vRouterView": {
+    "prefix": "vRouterView",
     "body": [
       "<router-view>$1</router-view>"
     ],
     "description": "router-view element"
   },
-  "RouterLink": {
-    "prefix": "RouterLink",
+  "vRouterLink": {
+    "prefix": "vRouterLink",
     "body": [
       "<router-link $1>$2</router-link>"
     ],
     "description": "router-link element"
   },
-  "RouterLinkTo": {
-    "prefix": "RouterLinkTo",
+  "vRouterLinkTo": {
+    "prefix": "vRouterLinkTo",
     "body": [
       "<router-link to=\"$1\">$2</router-link>"
     ],

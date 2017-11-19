@@ -1,22 +1,22 @@
 {
-  "RouterView": {
-    "prefix": "RouterView",
+  "vRouterView": {
+    "prefix": "vRouterView",
     "body": [
-      "router-view "
+      "router-view"
     ],
     "description": "router-view element"
   },
-  "RouterLink": {
-    "prefix": "RouterLink",
+  "vRouterLink": {
+    "prefix": "vRouterLink",
     "body": [
-      "router-link "
+      "router-link"
     ],
     "description": "router-link element"
   },
-  "RouterLinkTo": {
-    "prefix": "RouterLinkTo",
+  "vRouterLinkTo": {
+    "prefix": "vRouterLinkTo",
     "body": [
-      "router-link (to=\"$1\") "
+      "router-link(to=\"$1\")"
     ],
     "description": "router-link (to='') . router-link element"
   }

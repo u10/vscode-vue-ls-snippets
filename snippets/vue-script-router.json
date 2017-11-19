@@ -63,21 +63,21 @@
   "vrouter-push": {
     "prefix": "vrouter-push",
     "body": [
-      "${1:router}.push($2)"
+      "this.\\$router.push($0)"
     ],
     "description": "router.push()"
   },
   "vrouter-replace": {
     "prefix": "vrouter-replace",
     "body": [
-      "${1:router}.replace($2)"
+      "this.\\$router.replace($0)"
     ],
     "description": "router.replace()"
   },
   "vrouter-go": {
     "prefix": "vrouter-go",
     "body": [
-      "${1:router}.go($2)"
+      "this.\\$router.go($0)"
     ],
     "description": "router.go()"
   },

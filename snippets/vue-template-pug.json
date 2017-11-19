@@ -11,7 +11,7 @@
     "prefix": "vIf",
     "body": [
       "${1:div}(v-if=\"${2:condition}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vfor statement"
   },
@@ -19,7 +19,7 @@
     "prefix": "vIfWithKey",
     "body": [
       "${1:div}(v-if=\"${2:condition}\" key=\"${3:key}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vfor statement"
   },
@@ -27,7 +27,7 @@
     "prefix": "vElseIf",
     "body": [
       "${1:div}(v-else-if=\"${2:condition}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vfor statement"
   },
@@ -35,7 +35,7 @@
     "prefix": "vElseIfWithKey",
     "body": [
       "${1:div}(v-else-if=\"${2:condition}\" key=\"${3:key}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vfor statement"
   },
@@ -43,7 +43,7 @@
     "prefix": "vElse",
     "body": [
       "${1:div}(v-else)",
-      "\t"
+      "\t$0"
     ],
     "description": "vfor statement"
   },
@@ -51,7 +51,7 @@
     "prefix": "vElseWithKey",
     "body": [
       "${1:div}(v-else key=\"${2:key}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vfor statement"
   },
@@ -73,7 +73,7 @@
     "prefix": "vElProps",
     "body": [
       "${1:component}(:${2:propName}=\"${3:propValue}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "component element with props"
   },
@@ -88,7 +88,7 @@
     "prefix": "vClass",
     "body": [
       "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vue class binding"
   },
@@ -96,7 +96,7 @@
     "prefix": "vClassObj",
     "body": [
       "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vue class binding"
   },
@@ -104,7 +104,7 @@
     "prefix": "vClassObjMult",
     "body": [
       "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vue multiple conditional class bindings"
   },
@@ -112,7 +112,7 @@
     "prefix": "vStyle",
     "body": [
       "${1:div}(:style=\"{ fontSize: ${2:data} + 'px' }\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vue inline style binding"
   },
@@ -120,19 +120,20 @@
     "prefix": "vStyleObj",
     "body": [
       "${1:div}(:style=\"[${2:styleObjectA}, ${3:styleObjectB]}\")",
-      "\t"
+      "\t$0"
     ],
     "description": "vue inline style binding, objects"
   },
-  "Transition": {
-    "prefix": "Transition",
+  "vTransition": {
+    "prefix": "vTransition",
     "body": [
-      "transition"
+      "transition",
+      "\t$0"
     ],
     "description": "transition element"
   },
-  "TransitionAnim": {
-    "prefix": "TransitionAnim",
+  "vTransitionAnim": {
+    "prefix": "vTransitionAnim",
     "body": [
       "transition(",
       "\tmode=\"out-in\"",
@@ -141,35 +142,38 @@
       "\t@before-leave=\"beforeLeave\"",
       "\t@leave=\"leave\"",
       "\t:css=\"false\")",
-      "\t"
+      "\t$0"
     ],
     "description": "transition component js hooks"
   },
-  "TransitionGroup": {
-    "prefix": "TransitionGroup",
+  "vTransitionGroup": {
+    "prefix": "vTransitionGroup",
     "body": [
-      "transition-group"
+      "transition-group",
+      "\t$0"
     ],
     "description": "transition-group element"
   },
-  "Slot": {
-    "prefix": "slot",
+  "vSlot": {
+    "prefix": "vSlot",
     "body": [
-      "slot"
+      "slot",
+      "\t$0"
     ],
     "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
   },
-  "Component": {
-    "prefix": "Component",
+  "vComponent": {
+    "prefix": "vComponent",
     "body": [
-      "component(:is=\"${1:componentId}\") "
+      "component(:is=\"${1:componentId}\")"
     ],
     "description": "component element"
   },
-  "KeepAlive": {
-    "prefix": "KeepAlive",
+  "vKeepAlive": {
+    "prefix": "vKeepAlive",
     "body": [
-      "keep-alive"
+      "keep-alive",
+      "\t$0"
     ],
     "description": "keep-alive element"
   }

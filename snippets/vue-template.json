@@ -424,8 +424,8 @@
     ],
     "description": "vue inline style binding, objects"
   },
-  "Transition": {
-    "prefix": "Transition",
+  "vTransition": {
+    "prefix": "vTransition",
     "body": [
       "<transition$1>",
       "\t$0",
@@ -433,8 +433,8 @@
     ],
     "description": "transition element"
   },
-  "TransitionAnim": {
-    "prefix": "TransitionAnim",
+  "vTransitionAnim": {
+    "prefix": "vTransitionAnim",
     "body": [
       "<transition",
       "\tmode=\"out-in\"",
@@ -448,8 +448,8 @@
     ],
     "description": "transition component js hooks"
   },
-  "TransitionGroup": {
-    "prefix": "TransitionGroup",
+  "vTransitionGroup": {
+    "prefix": "vTransitionGroup",
     "body": [
       "<transition-group$1>",
       "\t$0",
@@ -457,22 +457,22 @@
     ],
     "description": "transition-group element"
   },
-  "Slot": {
-    "prefix": "Slot",
+  "vSlot": {
+    "prefix": "vSlot",
     "body": [
       "<slot$1>$2</slot>"
     ],
     "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
   },
-  "Component": {
-    "prefix": "Component",
+  "vComponent": {
+    "prefix": "vComponent",
     "body": [
       "<component :is=\"${1:componentId}\"></component>"
     ],
     "description": "component element"
   },
-  "KeepAlive": {
-    "prefix": "KeepAlive",
+  "vKeepAlive": {
+    "prefix": "vKeepAlive",
     "body": [
       "<keep-alive$1>",
       "\t$0",

@@ -1,4 +1,50 @@
 {
+  "function =>": {
+    "prefix": "function =>",
+		"body": [
+			"($1) => {",
+			"\t$0",
+			"}"
+		],
+		"description": "arrow function"
+  },
+  "console-block": {
+    "prefix": "console-block",
+		"body": [
+      "console.log('\n\n------ begin: $1 ------')",
+      "console.log(${0:''})",
+      "console.log('------ end: $1 ------\n\n')"
+		],
+		"description": "console.log()"
+  },
+  "console.log": {
+    "prefix": "console.log",
+		"body": [
+			"console.log('${1:tag}', ${0:''})"
+		],
+		"description": "console.log()"
+  },
+  "console.info": {
+    "prefix": "console.info",
+		"body": [
+			"console.info('${1:tag}', ${0:''})"
+		],
+		"description": "console.info()"
+  },
+  "console.warn": {
+    "prefix": "console.warn",
+		"body": [
+			"console.warn('${1:tag}', ${0:''})"
+		],
+		"description": "console.warn()"
+  },
+  "console.error": {
+    "prefix": "console.error",
+		"body": [
+			"console.error('${1:tag}', ${0:''})"
+		],
+		"description": "console.error()"
+  },
   "vImport": {
     "prefix": "vImport",
     "body": [
@@ -352,56 +398,56 @@
   "vm-data": {
     "prefix": "vm-data",
     "body": [
-      "${1:vm}.\\$data"
+      "${2|this,vm|}.\\$data$1"
     ],
     "description": "Type: Object"
   },
   "vm-props": {
     "prefix": "vm-props",
     "body": [
-      "${1:vm}.\\$props"
+      "${2|this,vm|}.\\$props$1"
     ],
     "description": "Type: Object"
   },
   "vm-el": {
     "prefix": "vm-el",
     "body": [
-      "${1:vm}.\\$el"
+      "${2|this,vm|}.\\$el$1"
     ],
     "description": "Type: HTMLElement"
   },
   "vm-options": {
     "prefix": "vm-options",
     "body": [
-      "${1:vm}.\\$options"
+      "${2|this,vm|}.\\$options$1"
     ],
     "description": "Type: Object"
   },
   "vm-parent": {
     "prefix": "vm-parent",
     "body": [
-      "${1:vm}.\\$parent"
+      "${2|this,vm|}.\\$parent$1"
     ],
     "description": "Type: Vue instance"
   },
   "vm-root": {
     "prefix": "vm-root",
     "body": [
-      "${1:vm}.\\$root"
+      "${2|this,vm|}.\\$root$1"
     ],
     "description": "Type: Vue instance"
   },
   "vm-children": {
     "prefix": "vm-children",
     "body": [
-      "${1:vm}.\\$children"
+      "${2|this,vm|}.\\$children$1"
     ],
     "description": "Type: Array<Vue instance>"
   },
   "vm-slots": {
     "prefix": "vm-slots",
     "body": [
-      "${1:vm}.\\$slots"
+      "${2|this,vm|}.\\$slots$1"
     ],
     "description": "Type: Object"
   },
@@ -417,105 +463,107 @@
   "vm-refs": {
     "prefix": "vm-refs",
     "body": [
-      "${1:vm}.\\$refs"
+      "${2|this,vm|}.\\$refs$1"
     ],
     "description": "Type: Object"
   },
   "vm-is-server": {
     "prefix": "vm-is-server",
     "body": [
-      "${1:vm}.\\$isServer"
+      "${2|this,vm|}.\\$isServer$1"
     ],
     "description": "Type: boolean"
   },
   "vm-attrs": {
     "prefix": "vm-attrs",
     "body": [
-      "${1:vm}.\\$attrs"
+      "${2|this,vm|}.\\$attrs$1"
     ],
     "description": "Type: { [key: string]: string }"
   },
   "vm-listeners": {
     "prefix": "vm-listeners",
     "body": [
-      "${1:vm}.\\$listeners"
+      "${2|this,vm|}.\\$listeners$1"
     ],
     "description": "Type: { [key: string]: Function | Array<Function> }"
   },
   "vm-watch": {
     "prefix": "vm-watch",
     "body": [
-      "${1:vm}.\\$watch(${2:expOrFn}, ${3:callback})"
+      "${3|this,vm|}.\\$watch(${1:expOrFn}, ${2:callback})"
     ],
     "description": "vm.$watch( expOrFn, callback, [options] )"
   },
   "vm-set": {
     "prefix": "vm-set",
     "body": [
-      "${1:vm}.\\$set(${2:object}, ${3:key}, ${4:value})"
+      "${4|this,vm|}.\\$set(${1:object}, ${2:key}, ${3:value})"
     ],
     "description": "vm.$set( object, key, value )"
   },
   "vm-delete": {
     "prefix": "vm-delete",
     "body": [
-      "${1:vm}.\\$delete(${2:object}, ${3:key})"
+      "${3|this,vm|}.\\$delete(${1:object}, ${2:key})"
     ],
     "description": "vm.$delete( object, key )"
   },
   "vm-on": {
     "prefix": "vm-on",
     "body": [
-      "${1:vm}.\\$on('${2:event}', ${3:callback})"
+      "${3|this,vm|}.\\$on('${1:event}', ${2:callback})"
     ],
     "description": "vm.$on( event, callback )"
   },
   "vm-once": {
     "prefix": "vm-once",
     "body": [
-      "${1:vm}.\\$once('${2:event}', ${3:callback})"
+      "${3|this,vm|}.\\$once('${1:event}', ${2:callback})"
     ],
     "description": "vm.$once( event, callback )"
   },
   "vm-off": {
     "prefix": "vm-off",
     "body": [
-      "${1:vm}.\\$off('${2:event}', ${3:callback})"
+      "${3|this,vm|}.\\$off('${1:event}', ${2:callback})"
     ],
     "description": "vm.$off( [event, callback] )"
   },
   "vm-emit": {
     "prefix": "vm-emit",
     "body": [
-      "${1:vm}.\\$emit('${2:event}'${3:, […args]})"
+      "${3|this,vm|}.\\$emit('${1:event}'${2:, […args]})"
     ],
     "description": "vm.$emit( event, […args] )"
   },
   "vm-mount": {
     "prefix": "vm-mount",
     "body": [
-      "${1:vm}.\\$mount('$2')"
+      "${2|this,vm|}.\\$mount('$1')"
     ],
     "description": "vm.$mount( [elementOrSelector] )"
   },
   "vm-force-update": {
     "prefix": "vm-force-update",
     "body": [
-      "${1:vm}.\\$forceUpdate()"
+      "${1|this,vm|}.\\$forceUpdate()"
     ],
     "description": "vm.$forceUpdate()"
   },
   "vm-next-tick": {
     "prefix": "vm-next-tick",
     "body": [
-      "${1:vm}.\\$nextTick(${2:callback})"
+      "${2|this,vm|}.\\$nextTick(() => {",
+      "\t$1",
+      "})"
     ],
     "description": "vm.$nextTick( callback )"
   },
   "vm-destroy": {
     "prefix": "vm-destroy",
     "body": [
-      "${1:vm}.\\$destroy()"
+      "${1|this,vm|}.\\$destroy()"
     ],
     "description": "vm.$destroy()"
   },

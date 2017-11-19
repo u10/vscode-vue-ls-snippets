@@ -82,44 +82,50 @@ Recommend use vue-ls extension.
 |`vClassObjMult`|&lt;<code>&#124;</code>``div`` :class="[<code>&#124;</code>``classNameA``, {<code>&#124;</code>``classNameB`` : <code>&#124;</code>``condition``}]"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/<code>&#124;</code>``div``&gt;<br />|
 |`vStyle`|&lt;<code>&#124;</code>``div`` :style="{ fontSize: <code>&#124;</code>``data`` + 'px' }"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/<code>&#124;</code>``div``&gt;<br />|
 |`vStyleObj`|&lt;<code>&#124;</code>``div`` :style="[<code>&#124;</code>``styleObjectA``, <code>&#124;</code>``styleObjectB]``"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/<code>&#124;</code>``div``&gt;<br />|
-|`Transition`|&lt;transition<code>&#124;</code>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/transition&gt;<br />|
-|`TransitionAnim`|&lt;transition<br />&nbsp;&nbsp;&nbsp;&nbsp;mode="out-in"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-enter="beforeEnter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@enter="enter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-leave="beforeLeave"<br />&nbsp;&nbsp;&nbsp;&nbsp;@leave="leave"<br />&nbsp;&nbsp;&nbsp;&nbsp;:css="false"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/transition&gt;<br />|
-|`TransitionGroup`|&lt;transition-group<code>&#124;</code>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/transition-group&gt;<br />|
-|`Slot`|&lt;slot<code>&#124;</code>&gt;<code>&#124;</code>&lt;/slot&gt;<br />|
-|`Component`|&lt;component :is="<code>&#124;</code>``componentId``"&gt;&lt;/component&gt;<br />|
-|`KeepAlive`|&lt;keep-alive<code>&#124;</code>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/keep-alive&gt;<br />|
+|`vTransition`|&lt;transition<code>&#124;</code>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/transition&gt;<br />|
+|`vTransitionAnim`|&lt;transition<br />&nbsp;&nbsp;&nbsp;&nbsp;mode="out-in"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-enter="beforeEnter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@enter="enter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-leave="beforeLeave"<br />&nbsp;&nbsp;&nbsp;&nbsp;@leave="leave"<br />&nbsp;&nbsp;&nbsp;&nbsp;:css="false"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/transition&gt;<br />|
+|`vTransitionGroup`|&lt;transition-group<code>&#124;</code>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/transition-group&gt;<br />|
+|`vSlot`|&lt;slot<code>&#124;</code>&gt;<code>&#124;</code>&lt;/slot&gt;<br />|
+|`vComponent`|&lt;component :is="<code>&#124;</code>``componentId``"&gt;&lt;/component&gt;<br />|
+|`vKeepAlive`|&lt;keep-alive<code>&#124;</code>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&lt;/keep-alive&gt;<br />|
 
 ### Vue Template Pug Snippets
 
 | Prefix | Snippet Content |
 | --- | --- |
 |`vFor`|<code>&#124;</code>``div``(v-for="<code>&#124;</code>``item`` in <code>&#124;</code>``item``s" :key="<code>&#124;</code>``item``.id")<br />&nbsp;&nbsp;&nbsp;&nbsp;{{ <code>&#124;</code>``item`` }}<br />|
-|`vIf`|<code>&#124;</code>``div``(v-if="<code>&#124;</code>``condition``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vIfWithKey`|<code>&#124;</code>``div``(v-if="<code>&#124;</code>``condition``" key="<code>&#124;</code>``key``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vElseIf`|<code>&#124;</code>``div``(v-else-if="<code>&#124;</code>``condition``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vElseIfWithKey`|<code>&#124;</code>``div``(v-else-if="<code>&#124;</code>``condition``" key="<code>&#124;</code>``key``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vElse`|<code>&#124;</code>``div``(v-else)<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vElseWithKey`|<code>&#124;</code>``div``(v-else key="<code>&#124;</code>``key``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
+|`vIf`|<code>&#124;</code>``div``(v-if="<code>&#124;</code>``condition``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vIfWithKey`|<code>&#124;</code>``div``(v-if="<code>&#124;</code>``condition``" key="<code>&#124;</code>``key``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vElseIf`|<code>&#124;</code>``div``(v-else-if="<code>&#124;</code>``condition``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vElseIfWithKey`|<code>&#124;</code>``div``(v-else-if="<code>&#124;</code>``condition``" key="<code>&#124;</code>``key``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vElse`|<code>&#124;</code>``div``(v-else)<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vElseWithKey`|<code>&#124;</code>``div``(v-else key="<code>&#124;</code>``key``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
 |`vModel`|input(v-model="<code>&#124;</code>``data``" type="text")<br />|
 |`vModelNum`|input(v-model.number="<code>&#124;</code>``numData``" type="number" step="1")<br />|
-|`vElProps`|<code>&#124;</code>``component``(:<code>&#124;</code>``propName``="<code>&#124;</code>``propValue``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
+|`vElProps`|<code>&#124;</code>``component``(:<code>&#124;</code>``propName``="<code>&#124;</code>``propValue``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
 |`vSrc`|img(:src="'/path/to/images/' + <code>&#124;</code>``fileName``" alt="<code>&#124;</code>``altText``")<br />|
-|`vClass`|<code>&#124;</code>``div``(:class="{ <code>&#124;</code>``className``: <code>&#124;</code>``data`` }")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vClassObj`|<code>&#124;</code>``div``(:class="[<code>&#124;</code>``classNameA``, <code>&#124;</code>``classNameB``]")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vClassObjMult`|<code>&#124;</code>``div``(:class="[<code>&#124;</code>``classNameA``, {<code>&#124;</code>``classNameB`` : <code>&#124;</code>``condition``}]")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vStyle`|<code>&#124;</code>``div``(:style="{ fontSize: <code>&#124;</code>``data`` + 'px' }")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`vStyleObj`|<code>&#124;</code>``div``(:style="[<code>&#124;</code>``styleObjectA``, <code>&#124;</code>``styleObjectB]``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`Transition`|transition<br />|
-|`TransitionAnim`|transition(<br />&nbsp;&nbsp;&nbsp;&nbsp;mode="out-in"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-enter="beforeEnter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@enter="enter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-leave="beforeLeave"<br />&nbsp;&nbsp;&nbsp;&nbsp;@leave="leave"<br />&nbsp;&nbsp;&nbsp;&nbsp;:css="false")<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />|
-|`TransitionGroup`|transition-group<br />|
-|`slot`|slot<br />|
-|`Component`|component(:is="<code>&#124;</code>``componentId``") <br />|
-|`KeepAlive`|keep-alive<br />|
+|`vClass`|<code>&#124;</code>``div``(:class="{ <code>&#124;</code>``className``: <code>&#124;</code>``data`` }")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vClassObj`|<code>&#124;</code>``div``(:class="[<code>&#124;</code>``classNameA``, <code>&#124;</code>``classNameB``]")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vClassObjMult`|<code>&#124;</code>``div``(:class="[<code>&#124;</code>``classNameA``, {<code>&#124;</code>``classNameB`` : <code>&#124;</code>``condition``}]")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vStyle`|<code>&#124;</code>``div``(:style="{ fontSize: <code>&#124;</code>``data`` + 'px' }")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vStyleObj`|<code>&#124;</code>``div``(:style="[<code>&#124;</code>``styleObjectA``, <code>&#124;</code>``styleObjectB]``")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vTransition`|transition<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vTransitionAnim`|transition(<br />&nbsp;&nbsp;&nbsp;&nbsp;mode="out-in"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-enter="beforeEnter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@enter="enter"<br />&nbsp;&nbsp;&nbsp;&nbsp;@before-leave="beforeLeave"<br />&nbsp;&nbsp;&nbsp;&nbsp;@leave="leave"<br />&nbsp;&nbsp;&nbsp;&nbsp;:css="false")<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vTransitionGroup`|transition-group<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vSlot`|slot<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
+|`vComponent`|component(:is="<code>&#124;</code>``componentId``")<br />|
+|`vKeepAlive`|keep-alive<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />|
 
 ### Vue Script Snippets
 
 | Prefix | Snippet Content |
 | --- | --- |
+|`function =>`|(<code>&#124;</code>) =&gt; {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />}<br />|
+|`console-block`|console.log('\n\n------ begin: <code>&#124;</code> ------')<br />console.log(<code>&#124;</code>``''``)<br />console.log('------ end: <code>&#124;</code> ------\n\n')<br />|
+|`console.log`|console.log('<code>&#124;</code>``tag``', <code>&#124;</code>``''``)<br />|
+|`console.info`|console.info('<code>&#124;</code>``tag``', <code>&#124;</code>``''``)<br />|
+|`console.warn`|console.warn('<code>&#124;</code>``tag``', <code>&#124;</code>``''``)<br />|
+|`console.error`|console.error('<code>&#124;</code>``tag``', <code>&#124;</code>``''``)<br />|
 |`vImport`|import <code>&#124;</code>``Name`` from './components/<code>&#124;</code>``Name``'<br />|
 |`vImportLib`|import <code>&#124;</code>``libName`` from '<code>&#124;</code>``libName``'<br />|
 |`vBaseWithComponent`|import <code>&#124;</code>``Name`` from '@/components/<code>&#124;</code>``Name``'<br /><br />export default {<br />&nbsp;&nbsp;&nbsp;&nbsp;components: {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code>``Name``<br />&nbsp;&nbsp;&nbsp;&nbsp;},<br />}<br />|
@@ -159,30 +165,30 @@ Recommend use vue-ls extension.
 |`vMethods`|methods: {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code>``name``() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />&nbsp;&nbsp;&nbsp;&nbsp;},<br />},<br />|
 |`vMethod`|<code>&#124;</code>``name``() {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />},<br />|
 |`vTransitionAnimHook`|beforeEnter(el) {<br />&nbsp;&nbsp;&nbsp;&nbsp;console.log('beforeEnter')<br />},<br />enter(el, done) {<br />&nbsp;&nbsp;&nbsp;&nbsp;console.log('enter')<br />&nbsp;&nbsp;&nbsp;&nbsp;done()<br />},<br />beforeLeave(el) {<br />&nbsp;&nbsp;&nbsp;&nbsp;console.log('beforeLeave')<br />},<br />leave(el, done) {<br />&nbsp;&nbsp;&nbsp;&nbsp;console.log('leave')<br />&nbsp;&nbsp;&nbsp;&nbsp;done()<br />},<br />|
-|`vm-data`|<code>&#124;</code>``vm``.\$data<br />|
-|`vm-props`|<code>&#124;</code>``vm``.\$props<br />|
-|`vm-el`|<code>&#124;</code>``vm``.\$el<br />|
-|`vm-options`|<code>&#124;</code>``vm``.\$options<br />|
-|`vm-parent`|<code>&#124;</code>``vm``.\$parent<br />|
-|`vm-root`|<code>&#124;</code>``vm``.\$root<br />|
-|`vm-children`|<code>&#124;</code>``vm``.\$children<br />|
-|`vm-slots`|<code>&#124;</code>``vm``.\$slots<br />|
+|`vm-data`|<code>&#124;</code>``[this,vm]``.\$data<code>&#124;</code><br />|
+|`vm-props`|<code>&#124;</code>``[this,vm]``.\$props<code>&#124;</code><br />|
+|`vm-el`|<code>&#124;</code>``[this,vm]``.\$el<code>&#124;</code><br />|
+|`vm-options`|<code>&#124;</code>``[this,vm]``.\$options<code>&#124;</code><br />|
+|`vm-parent`|<code>&#124;</code>``[this,vm]``.\$parent<code>&#124;</code><br />|
+|`vm-root`|<code>&#124;</code>``[this,vm]``.\$root<code>&#124;</code><br />|
+|`vm-children`|<code>&#124;</code>``[this,vm]``.\$children<code>&#124;</code><br />|
+|`vm-slots`|<code>&#124;</code>``[this,vm]``.\$slots<code>&#124;</code><br />|
 |`vm-scoped-slots`|\$this.\$scopedSlots.default({<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />})<br />|
-|`vm-refs`|<code>&#124;</code>``vm``.\$refs<br />|
-|`vm-is-server`|<code>&#124;</code>``vm``.\$isServer<br />|
-|`vm-attrs`|<code>&#124;</code>``vm``.\$attrs<br />|
-|`vm-listeners`|<code>&#124;</code>``vm``.\$listeners<br />|
-|`vm-watch`|<code>&#124;</code>``vm``.\$watch(<code>&#124;</code>``expOrFn``, <code>&#124;</code>``callback``)<br />|
-|`vm-set`|<code>&#124;</code>``vm``.\$set(<code>&#124;</code>``object``, <code>&#124;</code>``key``, <code>&#124;</code>``value``)<br />|
-|`vm-delete`|<code>&#124;</code>``vm``.\$delete(<code>&#124;</code>``object``, <code>&#124;</code>``key``)<br />|
-|`vm-on`|<code>&#124;</code>``vm``.\$on('<code>&#124;</code>``event``', <code>&#124;</code>``callback``)<br />|
-|`vm-once`|<code>&#124;</code>``vm``.\$once('<code>&#124;</code>``event``', <code>&#124;</code>``callback``)<br />|
-|`vm-off`|<code>&#124;</code>``vm``.\$off('<code>&#124;</code>``event``', <code>&#124;</code>``callback``)<br />|
-|`vm-emit`|<code>&#124;</code>``vm``.\$emit('<code>&#124;</code>``event``'<code>&#124;</code>``, […args]``)<br />|
-|`vm-mount`|<code>&#124;</code>``vm``.\$mount('<code>&#124;</code>')<br />|
-|`vm-force-update`|<code>&#124;</code>``vm``.\$forceUpdate()<br />|
-|`vm-next-tick`|<code>&#124;</code>``vm``.\$nextTick(<code>&#124;</code>``callback``)<br />|
-|`vm-destroy`|<code>&#124;</code>``vm``.\$destroy()<br />|
+|`vm-refs`|<code>&#124;</code>``[this,vm]``.\$refs<code>&#124;</code><br />|
+|`vm-is-server`|<code>&#124;</code>``[this,vm]``.\$isServer<code>&#124;</code><br />|
+|`vm-attrs`|<code>&#124;</code>``[this,vm]``.\$attrs<code>&#124;</code><br />|
+|`vm-listeners`|<code>&#124;</code>``[this,vm]``.\$listeners<code>&#124;</code><br />|
+|`vm-watch`|<code>&#124;</code>``[this,vm]``.\$watch(<code>&#124;</code>``expOrFn``, <code>&#124;</code>``callback``)<br />|
+|`vm-set`|<code>&#124;</code>``[this,vm]``.\$set(<code>&#124;</code>``object``, <code>&#124;</code>``key``, <code>&#124;</code>``value``)<br />|
+|`vm-delete`|<code>&#124;</code>``[this,vm]``.\$delete(<code>&#124;</code>``object``, <code>&#124;</code>``key``)<br />|
+|`vm-on`|<code>&#124;</code>``[this,vm]``.\$on('<code>&#124;</code>``event``', <code>&#124;</code>``callback``)<br />|
+|`vm-once`|<code>&#124;</code>``[this,vm]``.\$once('<code>&#124;</code>``event``', <code>&#124;</code>``callback``)<br />|
+|`vm-off`|<code>&#124;</code>``[this,vm]``.\$off('<code>&#124;</code>``event``', <code>&#124;</code>``callback``)<br />|
+|`vm-emit`|<code>&#124;</code>``[this,vm]``.\$emit('<code>&#124;</code>``event``'<code>&#124;</code>``, […args]``)<br />|
+|`vm-mount`|<code>&#124;</code>``[this,vm]``.\$mount('<code>&#124;</code>')<br />|
+|`vm-force-update`|<code>&#124;</code>``[this,vm]``.\$forceUpdate()<br />|
+|`vm-next-tick`|<code>&#124;</code>``[this,vm]``.\$nextTick(() =&gt; {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code><br />})<br />|
+|`vm-destroy`|<code>&#124;</code>``[this,vm]``.\$destroy()<br />|
 |`propsData`|propsData<br />|
 |`scopedSlots`|scopedSlots<br />|
 |`computed`|computed<br />|
@@ -217,9 +223,9 @@ Recommend use vue-ls extension.
 
 | Prefix | Snippet Content |
 | --- | --- |
-|`RouterView`|&lt;router-view&gt;<code>&#124;</code>&lt;/router-view&gt;<br />|
-|`RouterLink`|&lt;router-link <code>&#124;</code>&gt;<code>&#124;</code>&lt;/router-link&gt;<br />|
-|`RouterLinkTo`|&lt;router-link to="<code>&#124;</code>"&gt;<code>&#124;</code>&lt;/router-link&gt;<br />|
+|`vRouterView`|&lt;router-view&gt;<code>&#124;</code>&lt;/router-view&gt;<br />|
+|`vRouterLink`|&lt;router-link <code>&#124;</code>&gt;<code>&#124;</code>&lt;/router-link&gt;<br />|
+|`vRouterLinkTo`|&lt;router-link to="<code>&#124;</code>"&gt;<code>&#124;</code>&lt;/router-link&gt;<br />|
 |`to`|to="<code>&#124;</code>"<br />|
 |`tag`|tag="<code>&#124;</code>"<br />|
 
@@ -227,9 +233,9 @@ Recommend use vue-ls extension.
 
 | Prefix | Snippet Content |
 | --- | --- |
-|`RouterView`|router-view <br />|
-|`RouterLink`|router-link <br />|
-|`RouterLinkTo`|router-link (to="<code>&#124;</code>") <br />|
+|`vRouterView`|router-view<br />|
+|`vRouterLink`|router-link<br />|
+|`vRouterLinkTo`|router-link(to="<code>&#124;</code>")<br />|
 
 ### Vue Script Router Snippets
 
@@ -242,9 +248,9 @@ Recommend use vue-ls extension.
 |`vBeforeRouteEnter`|beforeRouteEnter: (to, from, next) =&gt; {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code>``// ...``<br />}<br />|
 |`vBeforeRouteLeave`|beforeRouteLeave: (to, from, next) =&gt; {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code>``// ...``<br />}<br />|
 |`vScrollBehavior`|scrollBehavior (to, from, savedPosition) {<br />&nbsp;&nbsp;&nbsp;&nbsp;<code>&#124;</code>``// ...``<br />}<br />|
-|`vrouter-push`|<code>&#124;</code>``router``.push(<code>&#124;</code>)<br />|
-|`vrouter-replace`|<code>&#124;</code>``router``.replace(<code>&#124;</code>)<br />|
-|`vrouter-go`|<code>&#124;</code>``router``.go(<code>&#124;</code>)<br />|
+|`vrouter-push`|this.\$router.push(<code>&#124;</code>)<br />|
+|`vrouter-replace`|this.\$router.replace(<code>&#124;</code>)<br />|
+|`vrouter-go`|this.\$router.go(<code>&#124;</code>)<br />|
 |`alias`|alias<br />|
 |`mode`|mode<br />|
 |`children`|children<br />|
