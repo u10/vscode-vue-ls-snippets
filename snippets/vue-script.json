@@ -11,9 +11,9 @@
   "console-block": {
     "prefix": "console-block",
 		"body": [
-      "console.log('\n\n------ begin: $1 ------')",
+      "console.log('\\n\\n------ begin: $1 ------')",
       "console.log(${0:''})",
-      "console.log('------ end: $1 ------\n\n')"
+      "console.log('------ end: $1 ------\\n\\n')"
 		],
 		"description": "console.log()"
   },
