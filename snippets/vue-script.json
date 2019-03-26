@@ -584,9 +584,11 @@
   "computed": {
     "prefix": "computed",
     "body": [
-      "computed"
+      "computed: {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "Computed properties"
   },
   "render": {
     "prefix": "render",
@@ -598,44 +600,56 @@
   "beforeCreate": {
     "prefix": "beforeCreate",
     "body": [
-      "beforeCreate"
+      "beforeCreate() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "beforeCreate method"
   },
   "created": {
     "prefix": "created",
     "body": [
-      "created"
+      "created() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "created method"
   },
   "beforeMount": {
     "prefix": "beforeMount",
     "body": [
-      "beforeMount"
+      "beforeMount() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "beforeMount method"
   },
   "mounted": {
     "prefix": "mounted",
     "body": [
-      "mounted"
+      "mounted() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "mounted method"
   },
   "beforeUpdate": {
     "prefix": "beforeUpdate",
     "body": [
-      "beforeUpdate"
+      "beforeUpdate() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "beforeUpdate method"
   },
   "updated": {
     "prefix": "updated",
     "body": [
-      "updated"
+      "updated() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "updated method"
   },
   "activated": {
     "prefix": "activated",
@@ -654,16 +668,20 @@
   "beforeDestroy": {
     "prefix": "beforeDestroy",
     "body": [
-      "beforeDestroy"
+      "beforeDestroy() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "beforeDestroy method"
   },
   "destroyed": {
     "prefix": "destroyed",
     "body": [
-      "destroyed"
+      "destroyed() {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "destroyed method"
   },
   "directives": {
     "prefix": "directives",
@@ -689,16 +707,20 @@
   "components": {
     "prefix": "components",
     "body": [
-      "components"
+      "components: {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "components property"
   },
   "mixins": {
     "prefix": "mixins",
     "body": [
-      "mixins"
+      "mixins: {",
+      "\t$1",
+      "},"
     ],
-    "description": "just a word"
+    "description": "mixins property"
   },
   "extends": {
     "prefix": "extends",
